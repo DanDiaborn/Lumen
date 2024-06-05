@@ -51,7 +51,9 @@ const building = () => {
     [
       'app/css/style.min.css',
       'app/js/main.min.js',
-      'app/**/*.html'
+      'app/**/*.html',
+      'app/fonts/*.woff2',
+      'app/images/*'
     ], { base: 'app' })
     .pipe(dest('dist'))
 
