@@ -11,8 +11,8 @@
 <body>
   <header class="header">
     <div class="header__wrapper container">
-      <a href="#" class="header__logo">
-        <img src="images/logo.svg" alt="" class="header__logo-img">
+      <a href="#" class="header__logo logo">
+        <img src="images/logo.svg" alt="" class="header__logo-img logo-img">
       </a>
       <div class="header__location">Москва</div>
       <ul class="header__menu">
@@ -42,12 +42,30 @@
           </a>
           <a href="tel:8 (800) 555-35-35" class="header__contacts-phone">8 (800) 555-35-35</a>
         </div>
-        <a href="#" class="header__request-call">Заказать звонок</a>
+        <a href="#" class="header__request-call black-button">Заказать звонок</a>
       </div>
+      <div class="header__contacts-mobile">
+        <div class="header__contacts-links">
+          <a href="#" class="header__contacts-link">
+            <img src="images/whatsapp.svg" alt="" class="header__contacts-img">
+          </a>
+          <a href="#" class="header__contacts-link">
+            <img src="images/telegram.svg" alt="" class="header__contacts-img">
+          </a>
+          <a href="tel:8 (800) 555-35-35" class="header__contacts-phone">8 (800) 555-35-35</a>
+        </div>
+      </div>
+      <a href="#" class="header__request-call-mobile black-button">Заказать звонок</a>
+    </div>
+  </header>
+  <header class="header-mobile">
+    <div class="header-mobile__wrapper">
+      <img src="images/logo.svg" alt="" class="header-mobile__logo">
+      <div class="header-mobile__menu-button"></div>
     </div>
   </header>
   <main class="main">
-    <section class="banner">
+    <section class="main__banner banner">
       <div class="banner__wrapper container">
         <div class="banner__text-part">
           <h1 class="banner__title">построим ваш <span class="banner__title-highlight">идеальный дом</span> в ижевске от
@@ -65,19 +83,432 @@
         </div>
       </div>
     </section>
-    <section class="download-catalog">
+    <section class="main__slider-section slider-section">
+      <div class="slider-section__wrapper container">
+        <div class="slider-section__header">
+          <h2 class="slider-section__title">Готовые дома на продажу</h2>
+          <div class="slider-section__pagination">
+            <div class="slider-section__pagination-numbers">
+              <div class="slider-section__current-slide-num">1</div>
+              <div class="slider-section__total-slide-num">/1</div>
+            </div>
+            <div class="slider-section__buttons">
+              <svg class="slider-section__arrow-prew slider-section__arrow slider-arrow" width="62" height="50"
+                viewBox="0 0 62 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="0.5" y="0.5" width="60.9835" height="49" stroke="url(#paint0_linear_406_27)" />
+                <path class="slider-arrow-rect" d="M36.1572 34L25.8266 25L36.1572 16"
+                  stroke="url(#paint1_linear_406_27)" />
+                <defs>
+                  <linearGradient id="paint0_linear_406_27" x1="61.9835" y1="3.4545e-06" x2="-7.77857" y2="9.32611"
+                    gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#B8A17F" />
+                    <stop offset="1" stop-color="#D1BD9F" />
+                  </linearGradient>
+                  <linearGradient id="paint1_linear_406_27" x1="25.8266" y1="34" x2="37.6163" y2="33.2703"
+                    gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#B8A17F" />
+                    <stop offset="1" stop-color="#D1BD9F" />
+                  </linearGradient>
+                </defs>
+              </svg>
+              <div class="slider-section__arrow-next slider-section__arrow">
+                <svg class="slider-section__arrow-prew slider-section__arrow slider-arrow slider-arrow-prev" width="62"
+                  height="50" viewBox="0 0 62 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect x="0.5" y="0.5" width="60.9835" height="49" stroke="url(#paint0_linear_406_27)" />
+                  <path class="slider-arrow-rect" d="M36.1572 34L25.8266 25L36.1572 16"
+                    stroke="url(#paint1_linear_406_27)" />
+                  <defs>
+                    <linearGradient id="paint0_linear_406_27" x1="61.9835" y1="3.4545e-06" x2="-7.77857" y2="9.32611"
+                      gradientUnits="userSpaceOnUse">
+                      <stop stop-color="#B8A17F" />
+                      <stop offset="1" stop-color="#D1BD9F" />
+                    </linearGradient>
+                    <linearGradient id="paint1_linear_406_27" x1="25.8266" y1="34" x2="37.6163" y2="33.2703"
+                      gradientUnits="userSpaceOnUse">
+                      <stop stop-color="#B8A17F" />
+                      <stop offset="1" stop-color="#D1BD9F" />
+                    </linearGradient>
+                  </defs>
+                </svg>
+
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-container">
+          <div class="swiper-wrapper">
+            <div class="slider-section__body swiper-slide">
+              <img src="images/house1.jpg" alt="" class="slider-section__img">
+              <div class="slider-section__text-wrapper">
+                <h3 class="slider-section__house-title">Коттедж «СМАРТ 2-140»</h3>
+                <div class="slider-section__text slider-section__text-top">
+                  <div class="slider-section__text-normal">Площадь</div>
+                  <div class="slider-section__text-bold">140м²</div>
+                </div>
+                <div class="slider-section__text slider-section__text-bottom">
+                  <div class="slider-section__text-normal">Стоимость</div>
+                  <div class="slider-section__text-bold">7 800 000₽</div>
+                </div>
+                <a href="#" class="slider-section__button brown-button">Подробнее</a>
+              </div>
+            </div>
+            <div class="slider-section__body swiper-slide">
+              <img src="images/house1.jpg" alt="" class="slider-section__img">
+              <div class="slider-section__text-wrapper">
+                <h3 class="slider-section__house-title">Коттедж «СМАРТ 2-140»</h3>
+                <div class="slider-section__text slider-section__text-top">
+                  <div class="slider-section__text-normal">Площадь</div>
+                  <div class="slider-section__text-bold">140м²</div>
+                </div>
+                <div class="slider-section__text slider-section__text-bottom">
+                  <div class="slider-section__text-normal">Стоимость</div>
+                  <div class="slider-section__text-bold">7 800 000₽</div>
+                </div>
+                <a href="#" class="slider-section__button brown-button">Подробнее</a>
+              </div>
+            </div>
+            <div class="slider-section__body swiper-slide">
+              <img src="images/house1.jpg" alt="" class="slider-section__img">
+              <div class="slider-section__text-wrapper">
+                <h3 class="slider-section__house-title">Коттедж «СМАРТ 2-140»</h3>
+                <div class="slider-section__text slider-section__text-top">
+                  <div class="slider-section__text-normal">Площадь</div>
+                  <div class="slider-section__text-bold">140м²</div>
+                </div>
+                <div class="slider-section__text slider-section__text-bottom">
+                  <div class="slider-section__text-normal">Стоимость</div>
+                  <div class="slider-section__text-bold">7 800 000₽</div>
+                </div>
+                <a href="#" class="slider-section__button brown-button">Подробнее</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+    <section class="main__slider-section main__slider-section-reflected slider-section slider-section-reflected">
+      <div class="slider-section__wrapper container">
+        <div class="slider-section__header">
+          <h2 class="slider-section__title">типовые проекты</h2>
+          <div class="slider-section__pagination">
+            <div class="slider-section__pagination-numbers">
+              <div class="slider-section__current-slide-num">1</div>
+              <div class="slider-section__total-slide-num">/1</div>
+            </div>
+            <div class="slider-section__buttons">
+              <svg class="slider-section__arrow-prew slider-section__arrow slider-arrow" width="62" height="50"
+                viewBox="0 0 62 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="0.5" y="0.5" width="60.9835" height="49" stroke="url(#paint0_linear_406_27)" />
+                <path class="slider-arrow-rect" d="M36.1572 34L25.8266 25L36.1572 16"
+                  stroke="url(#paint1_linear_406_27)" />
+                <defs>
+                  <linearGradient id="paint0_linear_406_27" x1="61.9835" y1="3.4545e-06" x2="-7.77857" y2="9.32611"
+                    gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#B8A17F" />
+                    <stop offset="1" stop-color="#D1BD9F" />
+                  </linearGradient>
+                  <linearGradient id="paint1_linear_406_27" x1="25.8266" y1="34" x2="37.6163" y2="33.2703"
+                    gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#B8A17F" />
+                    <stop offset="1" stop-color="#D1BD9F" />
+                  </linearGradient>
+                </defs>
+              </svg>
+              <div class="slider-section__arrow-next slider-section__arrow">
+                <svg class="slider-section__arrow-prew slider-section__arrow slider-arrow slider-arrow-prev" width="62"
+                  height="50" viewBox="0 0 62 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect x="0.5" y="0.5" width="60.9835" height="49" stroke="url(#paint0_linear_406_27)" />
+                  <path class="slider-arrow-rect" d="M36.1572 34L25.8266 25L36.1572 16"
+                    stroke="url(#paint1_linear_406_27)" />
+                  <defs>
+                    <linearGradient id="paint0_linear_406_27" x1="61.9835" y1="3.4545e-06" x2="-7.77857" y2="9.32611"
+                      gradientUnits="userSpaceOnUse">
+                      <stop stop-color="#B8A17F" />
+                      <stop offset="1" stop-color="#D1BD9F" />
+                    </linearGradient>
+                    <linearGradient id="paint1_linear_406_27" x1="25.8266" y1="34" x2="37.6163" y2="33.2703"
+                      gradientUnits="userSpaceOnUse">
+                      <stop stop-color="#B8A17F" />
+                      <stop offset="1" stop-color="#D1BD9F" />
+                    </linearGradient>
+                  </defs>
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-container">
+          <div class="swiper-wrapper">
+            <div class="slider-section__body swiper-slide">
+              <img src="images/typical.jpg" alt="" class="slider-section__img">
+              <div class="slider-section__text-wrapper">
+                <h3 class="slider-section__house-title">Дом «СМАРТ 1/145»»</h3>
+                <div class="slider-section__text slider-section__text-top">
+                  <div class="slider-section__text-normal">Площадь</div>
+                  <div class="slider-section__text-bold">145м²</div>
+                </div>
+                <div class="slider-section__text slider-section__text-bottom">
+                  <div class="slider-section__text-normal">Стоимость</div>
+                  <div class="slider-section__text-bold">7 390 000₽</div>
+                </div>
+                <a href="#" class="slider-section__button brown-button">Подробнее</a>
+              </div>
+            </div>
+            <div class="slider-section__body swiper-slide">
+              <img src="images/typical.jpg" alt="" class="slider-section__img">
+              <div class="slider-section__text-wrapper">
+                <h3 class="slider-section__house-title">Дом «СМАРТ 1/145»»</h3>
+                <div class="slider-section__text slider-section__text-top">
+                  <div class="slider-section__text-normal">Площадь</div>
+                  <div class="slider-section__text-bold">145м²</div>
+                </div>
+                <div class="slider-section__text slider-section__text-bottom">
+                  <div class="slider-section__text-normal">Стоимость</div>
+                  <div class="slider-section__text-bold">7 390 000₽</div>
+                </div>
+                <a href="#" class="slider-section__button brown-button">Подробнее</a>
+              </div>
+            </div>
+            <div class="slider-section__body swiper-slide">
+              <img src="images/typical.jpg" alt="" class="slider-section__img">
+              <div class="slider-section__text-wrapper">
+                <h3 class="slider-section__house-title">Дом «СМАРТ 1/145»»</h3>
+                <div class="slider-section__text slider-section__text-top">
+                  <div class="slider-section__text-normal">Площадь</div>
+                  <div class="slider-section__text-bold">145м²</div>
+                </div>
+                <div class="slider-section__text slider-section__text-bottom">
+                  <div class="slider-section__text-normal">Стоимость</div>
+                  <div class="slider-section__text-bold">7 390 000₽</div>
+                </div>
+                <a href="#" class="slider-section__button brown-button">Подробнее</a>
+              </div>
+            </div>
+            <div class="slider-section__body swiper-slide">
+              <img src="images/typical.jpg" alt="" class="slider-section__img">
+              <div class="slider-section__text-wrapper">
+                <h3 class="slider-section__house-title">Дом «СМАРТ 1/145»»</h3>
+                <div class="slider-section__text slider-section__text-top">
+                  <div class="slider-section__text-normal">Площадь</div>
+                  <div class="slider-section__text-bold">145м²</div>
+                </div>
+                <div class="slider-section__text slider-section__text-bottom">
+                  <div class="slider-section__text-normal">Стоимость</div>
+                  <div class="slider-section__text-bold">7 390 000₽</div>
+                </div>
+                <a href="#" class="slider-section__button brown-button">Подробнее</a>
+              </div>
+            </div>
+            <div class="slider-section__body swiper-slide">
+              <img src="images/typical.jpg" alt="" class="slider-section__img">
+              <div class="slider-section__text-wrapper">
+                <h3 class="slider-section__house-title">Дом «СМАРТ 1/145»»</h3>
+                <div class="slider-section__text slider-section__text-top">
+                  <div class="slider-section__text-normal">Площадь</div>
+                  <div class="slider-section__text-bold">145м²</div>
+                </div>
+                <div class="slider-section__text slider-section__text-bottom">
+                  <div class="slider-section__text-normal">Стоимость</div>
+                  <div class="slider-section__text-bold">7 390 000₽</div>
+                </div>
+                <a href="#" class="slider-section__button brown-button">Подробнее</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="main__slider-section slider-section">
+      <div class="slider-section__wrapper container">
+        <div class="slider-section__header">
+          <h2 class="slider-section__title">Индивидуальное проектирование</h2>
+          <div class="slider-section__pagination">
+            <div class="slider-section__pagination-numbers">
+              <div class="slider-section__current-slide-num">1</div>
+              <div class="slider-section__total-slide-num">/1</div>
+            </div>
+            <div class="slider-section__buttons">
+              <svg class="slider-section__arrow-prew slider-section__arrow slider-arrow" width="62" height="50"
+                viewBox="0 0 62 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="0.5" y="0.5" width="60.9835" height="49" stroke="url(#paint0_linear_406_27)" />
+                <path class="slider-arrow-rect" d="M36.1572 34L25.8266 25L36.1572 16"
+                  stroke="url(#paint1_linear_406_27)" />
+                <defs>
+                  <linearGradient id="paint0_linear_406_27" x1="61.9835" y1="3.4545e-06" x2="-7.77857" y2="9.32611"
+                    gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#B8A17F" />
+                    <stop offset="1" stop-color="#D1BD9F" />
+                  </linearGradient>
+                  <linearGradient id="paint1_linear_406_27" x1="25.8266" y1="34" x2="37.6163" y2="33.2703"
+                    gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#B8A17F" />
+                    <stop offset="1" stop-color="#D1BD9F" />
+                  </linearGradient>
+                </defs>
+              </svg>
+              <div class="slider-section__arrow-next slider-section__arrow">
+                <svg class="slider-section__arrow-prew slider-section__arrow slider-arrow slider-arrow-prev" width="62"
+                  height="50" viewBox="0 0 62 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect x="0.5" y="0.5" width="60.9835" height="49" stroke="url(#paint0_linear_406_27)" />
+                  <path class="slider-arrow-rect" d="M36.1572 34L25.8266 25L36.1572 16"
+                    stroke="url(#paint1_linear_406_27)" />
+                  <defs>
+                    <linearGradient id="paint0_linear_406_27" x1="61.9835" y1="3.4545e-06" x2="-7.77857" y2="9.32611"
+                      gradientUnits="userSpaceOnUse">
+                      <stop stop-color="#B8A17F" />
+                      <stop offset="1" stop-color="#D1BD9F" />
+                    </linearGradient>
+                    <linearGradient id="paint1_linear_406_27" x1="25.8266" y1="34" x2="37.6163" y2="33.2703"
+                      gradientUnits="userSpaceOnUse">
+                      <stop stop-color="#B8A17F" />
+                      <stop offset="1" stop-color="#D1BD9F" />
+                    </linearGradient>
+                  </defs>
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-container">
+          <div class="swiper-wrapper">
+            <div class="slider-section__body swiper-slide">
+              <img src="images/individual-house.jpg" alt="" class="slider-section__img">
+              <div class="slider-section__text-wrapper">
+                <h3 class="slider-section__house-title">Загородный дом «СМАРТ 1/200»</h3>
+                <div class="slider-section__text slider-section__text-top">
+                  <div class="slider-section__text-normal">Площадь</div>
+                  <div class="slider-section__text-bold">200м²</div>
+                </div>
+                <div class="slider-section__text slider-section__text-bottom">
+                  <div class="slider-section__text-normal">Стоимость</div>
+                  <div class="slider-section__text-bold">10 400 000₽</div>
+                </div>
+                <a href="#" class="slider-section__button brown-button">Подробнее</a>
+              </div>
+            </div>
+            <div class="slider-section__body swiper-slide">
+              <img src="images/house1.jpg" alt="" class="slider-section__img">
+              <div class="slider-section__text-wrapper">
+                <h3 class="slider-section__house-title">Загородный дом «СМАРТ 1/200»</h3>
+                <div class="slider-section__text slider-section__text-top">
+                  <div class="slider-section__text-normal">Площадь</div>
+                  <div class="slider-section__text-bold">200м²</div>
+                </div>
+                <div class="slider-section__text slider-section__text-bottom">
+                  <div class="slider-section__text-normal">Стоимость</div>
+                  <div class="slider-section__text-bold">10 400 000₽</div>
+                </div>
+                <a href="#" class="slider-section__button brown-button">Подробнее</a>
+              </div>
+            </div>
+            <div class="slider-section__body swiper-slide">
+              <img src="images/house1.jpg" alt="" class="slider-section__img">
+              <div class="slider-section__text-wrapper">
+                <h3 class="slider-section__house-title">Загородный дом «СМАРТ 1/200»</h3>
+                <div class="slider-section__text slider-section__text-top">
+                  <div class="slider-section__text-normal">Площадь</div>
+                  <div class="slider-section__text-bold">200м²</div>
+                </div>
+                <div class="slider-section__text slider-section__text-bottom">
+                  <div class="slider-section__text-normal">Стоимость</div>
+                  <div class="slider-section__text-bold">10 400 000₽</div>
+                </div>
+                <a href="#" class="slider-section__button brown-button">Подробнее</a>
+              </div>
+            </div>
+            <div class="slider-section__body swiper-slide">
+              <img src="images/house1.jpg" alt="" class="slider-section__img">
+              <div class="slider-section__text-wrapper">
+                <h3 class="slider-section__house-title">Загородный дом «СМАРТ 1/200»</h3>
+                <div class="slider-section__text slider-section__text-top">
+                  <div class="slider-section__text-normal">Площадь</div>
+                  <div class="slider-section__text-bold">200м²</div>
+                </div>
+                <div class="slider-section__text slider-section__text-bottom">
+                  <div class="slider-section__text-normal">Стоимость</div>
+                  <div class="slider-section__text-bold">10 400 000₽</div>
+                </div>
+                <a href="#" class="slider-section__button brown-button">Подробнее</a>
+              </div>
+            </div>
+            <div class="slider-section__body swiper-slide">
+              <img src="images/house1.jpg" alt="" class="slider-section__img">
+              <div class="slider-section__text-wrapper">
+                <h3 class="slider-section__house-title">Загородный дом «СМАРТ 1/200»</h3>
+                <div class="slider-section__text slider-section__text-top">
+                  <div class="slider-section__text-normal">Площадь</div>
+                  <div class="slider-section__text-bold">200м²</div>
+                </div>
+                <div class="slider-section__text slider-section__text-bottom">
+                  <div class="slider-section__text-normal">Стоимость</div>
+                  <div class="slider-section__text-bold">10 400 000₽</div>
+                </div>
+                <a href="#" class="slider-section__button brown-button">Подробнее</a>
+              </div>
+            </div>
+            <div class="slider-section__body swiper-slide">
+              <img src="images/house1.jpg" alt="" class="slider-section__img">
+              <div class="slider-section__text-wrapper">
+                <h3 class="slider-section__house-title">Загородный дом «СМАРТ 1/200»</h3>
+                <div class="slider-section__text slider-section__text-top">
+                  <div class="slider-section__text-normal">Площадь</div>
+                  <div class="slider-section__text-bold">200м²</div>
+                </div>
+                <div class="slider-section__text slider-section__text-bottom">
+                  <div class="slider-section__text-normal">Стоимость</div>
+                  <div class="slider-section__text-bold">10 400 000₽</div>
+                </div>
+                <a href="#" class="slider-section__button brown-button">Подробнее</a>
+              </div>
+            </div>
+            <div class="slider-section__body swiper-slide">
+              <img src="images/house1.jpg" alt="" class="slider-section__img">
+              <div class="slider-section__text-wrapper">
+                <h3 class="slider-section__house-title">Загородный дом «СМАРТ 1/200»</h3>
+                <div class="slider-section__text slider-section__text-top">
+                  <div class="slider-section__text-normal">Площадь</div>
+                  <div class="slider-section__text-bold">200м²</div>
+                </div>
+                <div class="slider-section__text slider-section__text-bottom">
+                  <div class="slider-section__text-normal">Стоимость</div>
+                  <div class="slider-section__text-bold">10 400 000₽</div>
+                </div>
+                <a href="#" class="slider-section__button brown-button">Подробнее</a>
+              </div>
+            </div>
+            <div class="slider-section__body swiper-slide">
+              <img src="images/house1.jpg" alt="" class="slider-section__img">
+              <div class="slider-section__text-wrapper">
+                <h3 class="slider-section__house-title">Загородный дом «СМАРТ 1/200»</h3>
+                <div class="slider-section__text slider-section__text-top">
+                  <div class="slider-section__text-normal">Площадь</div>
+                  <div class="slider-section__text-bold">200м²</div>
+                </div>
+                <div class="slider-section__text slider-section__text-bottom">
+                  <div class="slider-section__text-normal">Стоимость</div>
+                  <div class="slider-section__text-bold">10 400 000₽</div>
+                </div>
+                <a href="#" class="slider-section__button brown-button">Подробнее</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="main__download-catalog download-catalog">
       <div class="download-catalog__wrapper container">
         <div class="download-catalog__inner">
-          <span class="download-catalog__title">Не нашли подходящий дом?</span>
-          <div class="download-catalog__subtitle">Скачайте расширенный каталог проектов!</div>
+          <h2 class="download-catalog__title">Не нашли подходящий дом?</h2>
+          <h3 class="download-catalog__subtitle">Скачайте расширенный каталог проектов!</h3>
           <div class="download-catalog__button transparent-button">Скачать</div>
         </div>
       </div>
     </section>
-    <section class="mortgage">
+    <section class="main__mortgage mortgage">
       <div class="mortgage__wrapper container">
         <div class="mortgage__text-part">
-          <h2 class="mortgage__title">Строим в ипотеку и за наличный расчет</h2>
+          <h1 class="mortgage__title">Строим в ипотеку и за наличный расчет</h1>
           <ul class="mortgage__list">
             <li class="mortgage__item">Проконсультируем по ипотечным продуктам</li>
             <li class="mortgage__item">Поможем собрать документы</li>
@@ -90,7 +521,251 @@
         <img src="images/mortgage.jpg" alt="" class="mortgage__img">
       </div>
     </section>
+    <section class="main__slider-section slider-section">
+      <div class="slider-section__wrapper container">
+        <div class="slider-section__header">
+          <h2 class="slider-section__title">Отзывы наших клиентов</h2>
+          <div class="slider-section__pagination">
+            <div class="slider-section__pagination-numbers">
+              <div class="slider-section__current-slide-num">1</div>
+              <div class="slider-section__total-slide-num">/1</div>
+            </div>
+            <div class="slider-section__buttons">
+              <svg class="slider-section__arrow-prew slider-section__arrow slider-arrow" width="62" height="50"
+                viewBox="0 0 62 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="0.5" y="0.5" width="60.9835" height="49" stroke="url(#paint0_linear_406_27)" />
+                <path class="slider-arrow-rect" d="M36.1572 34L25.8266 25L36.1572 16"
+                  stroke="url(#paint1_linear_406_27)" />
+                <defs>
+                  <linearGradient id="paint0_linear_406_27" x1="61.9835" y1="3.4545e-06" x2="-7.77857" y2="9.32611"
+                    gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#B8A17F" />
+                    <stop offset="1" stop-color="#D1BD9F" />
+                  </linearGradient>
+                  <linearGradient id="paint1_linear_406_27" x1="25.8266" y1="34" x2="37.6163" y2="33.2703"
+                    gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#B8A17F" />
+                    <stop offset="1" stop-color="#D1BD9F" />
+                  </linearGradient>
+                </defs>
+              </svg>
+              <div class="slider-section__arrow-next slider-section__arrow">
+                <svg class="slider-section__arrow-prew slider-section__arrow slider-arrow slider-arrow-prev" width="62"
+                  height="50" viewBox="0 0 62 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect x="0.5" y="0.5" width="60.9835" height="49" stroke="url(#paint0_linear_406_27)" />
+                  <path class="slider-arrow-rect" d="M36.1572 34L25.8266 25L36.1572 16"
+                    stroke="url(#paint1_linear_406_27)" />
+                  <defs>
+                    <linearGradient id="paint0_linear_406_27" x1="61.9835" y1="3.4545e-06" x2="-7.77857" y2="9.32611"
+                      gradientUnits="userSpaceOnUse">
+                      <stop stop-color="#B8A17F" />
+                      <stop offset="1" stop-color="#D1BD9F" />
+                    </linearGradient>
+                    <linearGradient id="paint1_linear_406_27" x1="25.8266" y1="34" x2="37.6163" y2="33.2703"
+                      gradientUnits="userSpaceOnUse">
+                      <stop stop-color="#B8A17F" />
+                      <stop offset="1" stop-color="#D1BD9F" />
+                    </linearGradient>
+                  </defs>
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-container">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="slider-section__review  review">
+                <div class="review__wrapper">
+                  <img src="images/quotes.svg" alt="" class="review__quotes">
+                  <div class="review__text">
+                    Я остался очень доволен сотрудничеством со строительной компанией
+                    «Lumen Групп». Профессионализм и отличный подход сотрудников позволили нам воплотить все наши идеи в
+                    реальность. Качество выполняемых работ на высоком уровне, сроки соблюдались, а коммуникация с
+                    заказчиком была на высшем уровне. Благодаря этой компании мы получили дом мечты без лишних хлопот.
+                    Рекомендую всем, кто ценит качество и профессионализм!
+                  </div>
+                  <div class="review__author">
+                    Максим Королев, 34 года <br>
+                    г. Ижевск
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="slider-section__review  review">
+                <div class="review__wrapper">
+                  <img src="images/quotes.svg" alt="" class="review__quotes">
+                  <div class="review__text">
+                    Я остался очень доволен сотрудничеством со строительной компанией
+                    «Lumen Групп». Профессионализм и отличный подход сотрудников позволили нам воплотить все наши идеи в
+                    реальность. Качество выполняемых работ на высоком уровне, сроки соблюдались, а коммуникация с
+                    заказчиком была на высшем уровне. Благодаря этой компании мы получили дом мечты без лишних хлопот.
+                    Рекомендую всем, кто ценит качество и профессионализм!
+                  </div>
+                  <div class="review__author">
+                    Максим Королев, 34 года <br>
+                    г. Ижевск
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="slider-section__review  review">
+                <div class="review__wrapper">
+                  <img src="images/quotes.svg" alt="" class="review__quotes">
+                  <div class="review__text">
+                    Я остался очень доволен сотрудничеством со строительной компанией
+                    «Lumen Групп». Профессионализм и отличный подход сотрудников позволили нам воплотить все наши идеи в
+                    реальность. Качество выполняемых работ на высоком уровне, сроки соблюдались, а коммуникация с
+                    заказчиком была на высшем уровне. Благодаря этой компании мы получили дом мечты без лишних хлопот.
+                    Рекомендую всем, кто ценит качество и профессионализм!
+                  </div>
+                  <div class="review__author">
+                    Максим Королев, 34 года <br>
+                    г. Ижевск
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="slider-section__review  review">
+                <div class="review__wrapper">
+                  <img src="images/quotes.svg" alt="" class="review__quotes">
+                  <div class="review__text">
+                    Я остался очень доволен сотрудничеством со строительной компанией
+                    «Lumen Групп». Профессионализм и отличный подход сотрудников позволили нам воплотить все наши идеи в
+                    реальность. Качество выполняемых работ на высоком уровне, сроки соблюдались, а коммуникация с
+                    заказчиком была на высшем уровне. Благодаря этой компании мы получили дом мечты без лишних хлопот.
+                    Рекомендую всем, кто ценит качество и профессионализм!
+                  </div>
+                  <div class="review__author">
+                    Максим Королев, 34 года <br>
+                    г. Ижевск
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="main__tour tour">
+      <div class="tour__wrapper container">
+        <div class="tour__text-part">
+          <h2 class="tour__title">Запишитесь на экскурсию в удобное время</h2>
+          <h3 class="tour__subtitle">По готовым домам или строящимся объектам</h3>
+        </div>
+        <div class="tour__form-part">
+          <form action="#" class="tour__form">
+            <div class="tour__input-wrapper">
+              <input type="text" placeholder="Имя" class="tour__name">
+            </div>
+            <div class="tour__input-wrapper">
+              <input type="tel" placeholder="Телефон" class="tour__phone">
+            </div>
+            <div class="tour__checkbox-wrapper">
+              <input type="checkbox" id="checkbox" class="tour__checkbox">
+              <label class="tour__checkbox-label" for="checkbox">Согласен на обработку персональных данных</label>
+            </div>
+            <input type="submit" value="записаться" class="tour__submit transparent-button">
+          </form>
+        </div>
+      </div>
+    </section>
   </main>
+  <footer class="footer">
+    <div class="footer__wrapper container">
+      <h2 class="footer__title">наши контакты</h2>
+      <ul class="footer__lists">
+        <li class="footer__list">
+          <ul class="footer__items">
+            <li class="footer__item">
+              <a href="#" class="footer__logo logo">
+                <img src="images/logo.svg" alt="" class="footer__logo-img logo-img">
+              </a>
+            </li>
+            <li class="footer__text footer__text-main">Строительная компания <br>ООО «Люмен Групп»</li>
+            <li class="footer__links">
+              <a href="#" class="footer__link">Вконтакте</a>
+              <a href="#" class="footer__link">Телеграм</a>
+            </li>
+          </ul>
+        </li>
+        <li class="footer__list">
+          <ul class="footer__items">
+            <li class="footer__item">
+              <div class="footer__text">
+                <div class="footer__subtext">ИНН</div>
+                <div class="footer__subtext">1840120739</div>
+              </div>
+            </li>
+            <li class="footer__item">
+              <div class="footer__text">
+                <div class="footer__subtext">КПП</div>
+                <div class="footer__subtext">184001001</div>
+              </div>
+            </li>
+          </ul>
+        </li>
+        <li class="footer__list">
+          <ul class="footer__items">
+            <li class="footer__item">
+              <div class="footer__text">
+                <div class="footer__subtext">Адрес:</div>
+                <div class="footer__subtext">426060, Удмуртская Республика, г. Ижевск, ул. 9 Января, д. 203, кв. 79
+                </div>
+              </div>
+            </li>
+            <li class="footer__item">
+              <div class="footer__text">
+                <div class="footer__subtext">Телефон:</div>
+                <a href="tel:8 (800) 555-35-35" class="footer__subtext ">8 (800) 555-35-35</a>
+              </div>
+            </li>
+            <li class="footer__item">
+              <div class="footer__text">
+                <div class="footer__subtext">Режим работы:</div>
+                <div class="footer__subtext">Ееждневно с 9:00 до 20:00 </div>
+              </div>
+            </li>
+          </ul>
+        </li>
+        <li class="footer__list footer__list-nav">
+          <ul class="footer__items">
+            <li class="footer__item">
+              <div class="footer__text">О компании</div>
+            </li>
+            <li class="footer__item">
+              <div class="footer__text">Дома</div>
+            </li>
+            <li class="footer__item">
+              <div class="footer__text">Ипотека</div>
+            </li>
+            <li class="footer__item">
+              <div class="footer__text">Отзывы</div>
+            </li>
+            <li class="footer__item">
+              <div class="footer__text">Инвесторам</div>
+            </li>
+          </ul>
+        </li>
+        <li class="footer__links-mobile">
+          <a href="#" class="footer__link">Вконтакте</a>
+          <a href="#" class="footer__link">Телеграм</a>
+        </li>
+      </ul>
+      <div class="footer__subfooter">
+        <div class="footer__subfooter-item">© 2024, ООО «Люмен Групп». Все права защищены</div>
+        <div class="footer__subfooter-item footer__subfooter-item-underline">Политика обработки персональных данных
+        </div>
+        <div class="footer__subfooter-item footer__subfooter-item-developers">
+          <div class="footer__subfooter-item-text">Разработка сайта</div>
+          <img src="images/studio-logo.svg" alt="" class="footer__studio-logo">
+        </div>
+      </div>
+    </div>
+  </footer>
 </body>
 <script src="js/main.min.js"></script>
 
