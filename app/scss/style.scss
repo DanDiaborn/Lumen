@@ -1,10 +1,34 @@
 @import "../../node_modules/normalize.css/normalize";
 @import "../../node_modules/reset-css/reset";
+@import "../../node_modules/swiper/swiper.scss";
+@import "../../node_modules/swiper/modules/pagination.scss";
 @import "fonts";
 @import "common";
 
+
 $black: #2E2E2E;
 
+.main{
+  &__banner{
+    padding-bottom: 120px;
+  }
+  &__download-catalog{
+    padding: 120px 0;
+  }
+  &__mortgage{
+    padding: 120px 0;
+    background-color: #f4f8fc;
+  }
+  &__tour{
+    padding: 120px 0;
+  }
+  &__slider-section{
+    padding: 120px 0;
+  }
+  &__slider-section-reflected{
+    background-color: #f4f8fc;
+  }
+}
 
 .header{
   position: absolute;
@@ -16,14 +40,6 @@ $black: #2E2E2E;
     display: flex;
     justify-content: space-between;
     align-items: center;
-  }
-  &__logo{
-    width: 180px;
-    height: 38px;
-  }
-  &__logo-img{
-    width: 100%;
-    height: 100%;
   }
   &__location{
     position: relative;
@@ -72,20 +88,12 @@ $black: #2E2E2E;
     position: absolute;
     top: calc(100% + 10px);
     right: 0;
-    width: 100%;
-    height: 40px;
-    border: 1px solid #2E2E2E;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-transform: uppercase;
   }
 }
 
 .banner{
   &__wrapper{
     display: flex;
-    padding-bottom: 60px;
   }
   &__text-part{
     width: 445px;
@@ -159,6 +167,92 @@ linear-gradient(180deg, #FFFFFF 2.7%, rgba(255, 255, 255, 0) 23.24%);
   }
 }
 
+.slider-section{
+  &__wrapper{
+    overflow: hidden;
+  }
+  &__header{
+    margin-bottom: 60px;
+    display: flex;
+    justify-content: space-between;
+  }
+  &__pagination{
+    display: flex;
+    gap: 30px;
+  }
+  &__pagination-numbers{
+    color: #2E2E2E;
+    display: flex;
+    width: 30px;
+    justify-content: space-between;
+    position: relative;
+  }
+  &__current-slide-num{
+    font-size: 22px;
+    align-self: flex-start;
+  }
+  &__total-slide-num{
+    font-size: 16px;
+    align-self: flex-start;
+  }
+  &__buttons{
+    display: flex;
+    gap: 10px;
+  }
+  &__title{
+    font-weight: 600;
+    font-size: 26px;
+    color: #0F1B35;
+    text-transform: uppercase;
+  }
+  &__body{
+    display: flex;
+    gap: 60px;
+  }
+  &__img{
+    width: 600px;
+    height: 400px;
+  }
+  &__house-title{
+    font-size: 26px;
+    line-height: 31.2px;
+    margin-bottom: 30px;
+  }
+  &__text{
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+  &__text-top{
+    margin-bottom: 20px;
+  }
+  &__text-bottom{
+    margin-bottom: 40px;
+  }
+  &__text-normal{
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 19.2px;
+  }
+  &__text-bold{
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 21.6px;
+  }
+}
+
+.slider-section-reflected{
+  .slider-section__body{
+    justify-content: space-between;
+    & > img{
+      order: 2;
+    }
+    & > div{
+      order: 1;
+    }
+  }
+}
+
 .download-catalog{
   &__wrapper{
     background: linear-gradient(263.85deg, #B8A17F 0%, #D1BD9F 103.41%);
@@ -195,8 +289,6 @@ linear-gradient(180deg, #FFFFFF 2.7%, rgba(255, 255, 255, 0) 23.24%);
 }
 
 .mortgage{
-  background-color: #f4f8fc;
-  padding: 120px 0;
   &__wrapper{
     display: flex;
   }
@@ -224,5 +316,187 @@ linear-gradient(180deg, #FFFFFF 2.7%, rgba(255, 255, 255, 0) 23.24%);
   &__img{
     width: 600px;
     margin-left: auto;
+  }
+}
+
+.tour{
+  &__wrapper{
+    background: linear-gradient(263.85deg, #B8A17F 0%, #D1BD9F 103.41%);
+    padding: 80px;
+    display: flex;
+  }
+  &__text-part{
+    width: 50%;
+    padding-right: 70px;
+  }
+  &__form-part{
+    width: 50%;
+  }
+  &__title{
+    font-weight: 600;
+    font-size: 26px;
+    line-height: 31.2px;
+    color: #fff;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+  }
+  &__subtitle{
+    color: #fff;
+    font-size: 26px;
+    line-height: 31.2px;
+  }
+  &__form{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+  &__input-wrapper{
+    max-width: 340px;
+    position: relative;
+    &:before{
+      position: absolute;
+      content: "";
+      width: 100%;
+      height: 1px;
+      background-color: #fff;
+      bottom: -10px;
+      left: 0;
+    }
+  }
+  &__name,
+  &__phone{
+    width: 100%;
+    border: none;
+    background-color: transparent;
+    outline: none;
+    color: #fff;
+    font-size: 14px;
+    padding: 0 5px;
+    &::placeholder{
+      color: #fff;
+      font-size: 14px;
+      opacity: .7;
+    }
+  }
+  &__checkbox{
+    display: none;
+  }
+  &__checkbox-label{
+    display: inline-block;
+    padding: 10px 0 10px 35px;
+    font-size: 14px;
+    color: #fff;
+    cursor: pointer;
+    line-height: 17.07px;
+    position: relative;
+  }
+  &__checkbox + &__checkbox-label:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: calc(50% + 1px);
+    transform: translateY(-50%);
+    width: 17px;
+    height: 17px;
+    background: url('../images/white-checkbox-unactive.svg') no-repeat center center;
+    background-size: contain;
+  }
+  &__checkbox:checked + &__checkbox-label:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 26px;
+    height: 20px;
+    background: url('../images/white-checkbox.svg') no-repeat center center;
+    background-size: contain;
+  }
+}
+
+.footer{
+  background-color: #f4f8fc;
+  &__wrapper{
+    color: #2E2E2E;
+    padding-top: 120px;
+  }
+  &__title{
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 26px;
+  }
+  &__lists{
+    margin-top: 60px;
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 80px;
+    position: relative;
+    &:before{
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 1px;
+      left: 0;
+      bottom: 0;
+      background-color: #D9D9D9;
+    }
+  }
+  &__items{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  &__item{
+    max-width: 268px;
+    line-height: 17px;
+  }
+  &__text{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+  &__text-main{
+    line-height: 19.2px;
+  }
+  &__links{
+    margin-top: 50px;
+    display: flex;
+    gap: 20px;
+  }
+  &__link{
+    text-decoration: underline;
+  }
+  &__subfooter{
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-between;
+    font-size: 10px;
+  }
+  &__subfooter-item-underline{
+    text-decoration: underline;
+  }
+  &__subfooter-item{
+    display: flex;
+    gap: 7px;
+    align-items: center;
+  }
+  &__studio-logo{
+    width: 80px;
+    height: 16px;
+  }
+}
+
+.review{
+  &__wrapper{
+    margin-left: 50%;
+  }
+  &__text{
+    margin-bottom: 20px;
+    font-size: 16px;
+    line-height: 19.2px;
+  }
+  &__author{
+    font-size: 14px;
+    line-height: 17.07px;
   }
 }

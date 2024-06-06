@@ -6,7 +6,8 @@
   "dependencies": {
     "gulp-clean": "^0.4.0",
     "normalize.css": "^8.0.1",
-    "reset-css": "^5.0.2"
+    "reset-css": "^5.0.2",
+    "swiper": "^11.1.4"
   },
   "devDependencies": {
     "browser-sync": "^3.0.2",

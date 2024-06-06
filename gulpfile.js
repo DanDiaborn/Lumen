@@ -9,13 +9,14 @@ const clean = require('gulp-clean');
 
 const watching = () => {
   watch(['app/scss/*.scss'], styles);
-  watch(['app/js/*.js'], scripts);
+  watch(['app/js/main.js'], scripts);
   watch(['app/*.html']).on('change', browserSync.reload)
 }
 
 const scripts = () => {
   return src([
     //path to scripts in node molules.
+    'app/js/swiper-bundle.js',
     'app/js/main.js'])
     .pipe(concat('main.min.js'))
     .pipe(uglify())
