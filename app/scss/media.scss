@@ -7,6 +7,12 @@
 }
 
 @media (max-width: 1200px) {
+  .main{
+    &__slider-section{
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+  }
   .footer{
     padding: 0 10px;
   }
@@ -30,9 +36,6 @@
     }
   }
   .slider-section{
-    &__wrapper{
-      padding: 0 10px;
-    }
     &__body{
       gap: 30px;
     }
