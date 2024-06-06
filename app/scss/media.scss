@@ -1,3 +1,11 @@
+@media (max-width: 1450px) {
+  .banner{
+    &__img{
+      position: relative;
+    }
+  }
+}
+
 @media (max-width: 1200px) {
   .footer{
     padding: 0 10px;
