@@ -47,7 +47,11 @@ $black: #2E2E2E;
   }
   &__location{
     position: relative;
+  }
+  &__location-current{
+    position: relative;
     padding-left: 20px;  
+    cursor: pointer;
     &:before{
       content: "";
       position: absolute;
@@ -60,9 +64,45 @@ $black: #2E2E2E;
       background-size: cover;
     }
   }
+  &__location-list{
+    bottom: -75px;
+    width: 178px;
+    padding: 10px;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    border: 1px solid transparent; /* Transparent border to make the gradient visible */
+    border-image-source: linear-gradient(263.85deg, #B8A17F 0%, #D1BD9F 103.41%);
+    border-image-slice: 1; /* Ensure the gradient covers the entire border */
+  }
+  &__location-hide{
+    display: none;
+  }
+  &__location-item{
+    cursor: pointer;
+  }
   &__menu{
     display: flex;
     gap: 20px;
+  }
+  &__menu-link{
+    position: relative;
+  }
+  &__submenu{
+    bottom: -150px;
+    width: 178px;
+    padding: 10px;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    border: 1px solid transparent; /* Transparent border to make the gradient visible */
+    border-image-source: linear-gradient(263.85deg, #B8A17F 0%, #D1BD9F 103.41%);
+    border-image-slice: 1; /* Ensure the gradient covers the entire border */
+  }
+  &__submenu-hide{
+    display: none;
   }
   &__menu-item-parent{
     padding-right: 20px;

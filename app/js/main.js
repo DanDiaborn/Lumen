@@ -39,4 +39,18 @@ window.onload = () => {
     document.querySelector('.header').classList.toggle('header-opened');
   }
 
+  const location = document.querySelector('.header__location-current');
+
+  location.onclick = () => {
+    document.querySelector('.header__location-list').classList.toggle('header__location-hide');
+  }
+
+  const subMenus = document.querySelectorAll('.header__menu-item-parent');
+
+  subMenus.forEach((el, key) => {
+    el.onclick = () => {
+      document.querySelectorAll('.header__submenu')[key].classList.toggle('header__submenu-hide');
+    }
+  })
+
 }

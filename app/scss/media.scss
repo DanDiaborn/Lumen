@@ -2,6 +2,17 @@
   .banner{
     &__img{
       position: relative;
+      width: 780px;
+      height: 740px;
+    }
+    &__img-wrapper{
+      &:before{
+        width: 780px;
+        height: 740px;
+      }
+    }
+    &__wrapper{
+      gap: 30px;
     }
   }
 }
@@ -14,12 +25,13 @@
     }
   }
   .footer{
-    padding: 0 10px;
+    padding: 0 20px;
   }
   .banner{
     &__wrapper{
       padding: 0 10px;
-      gap: 20px;
+      justify-content: space-between;
+
     }
     &__text-part{
       margin-top: 20px;
@@ -28,6 +40,35 @@
       &::before{
         display: none;
       }
+    }
+  }
+  .download-catalog{
+    &__wrapper{
+      margin: 0 10px;
+      padding: 20px;
+    }
+    &__inner{
+      display: grid;
+      grid-template-columns: auto;
+      grid-template-rows: auto auto auto;
+      padding: 20px;    
+    }
+    &__title{
+      grid-column: 1 / 2;
+      grid-row: 1 / 2;
+      font-size: 20px;
+      line-height: 26px;
+    }
+    &__subtitle{
+      grid-column: 1 / 2;
+      grid-row: 2 / 3;
+      font-size: 20px;
+      line-height: 24px;
+      padding-bottom: 30px;
+    }
+    &__button{
+      grid-column: 1 / 2;
+      grid-row: 3 / 4;
     }
   }
   .mortgage{
@@ -323,36 +364,6 @@
     }
   }
 
-  .download-catalog{
-    &__wrapper{
-      margin: 0 10px;
-      padding: 20px;
-    }
-    &__inner{
-      display: grid;
-      grid-template-columns: auto;
-      grid-template-rows: auto auto auto;
-      padding: 20px;    
-    }
-    &__title{
-      grid-column: 1 / 2;
-      grid-row: 1 / 2;
-      font-size: 20px;
-      line-height: 26px;
-    }
-    &__subtitle{
-      grid-column: 1 / 2;
-      grid-row: 2 / 3;
-      font-size: 20px;
-      line-height: 24px;
-      padding-bottom: 30px;
-    }
-    &__button{
-      grid-column: 1 / 2;
-      grid-row: 3 / 4;
-    }
-  }
-
   .slider-section{
     &__wrapper{
       padding: 0 10px;
@@ -470,5 +481,11 @@
   }
   .swiper-container{
     overflow: hidden;
+  }
+}
+
+@media (max-width: 375px) {
+  .black-button{
+    max-width: 100%;
   }
 }
