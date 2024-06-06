@@ -29,4 +29,14 @@ window.onload = () => {
       swiper.slideTo(swiper.realIndex + 1);
     }
   });
+
+
+  const burgerButton = document.querySelector('.header-mobile__menu-button ');
+
+  burgerButton.onclick = () => {
+    document.querySelector('body').classList.toggle('lock');
+    document.querySelector('.header-mobile__menu-button').classList.toggle('header-mobile__menu-button-opened');
+    document.querySelector('.header').classList.toggle('header-opened');
+  }
+
 }
