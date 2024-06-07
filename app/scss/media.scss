@@ -117,8 +117,8 @@
     z-index: 100;
     margin-top: 75px;
     border-top: 1px solid #D9D9D9;
-    transform: translateY(-200%);
-    transition: all .2s linear;
+    transform: translateX(200%);
+    transition: all .5s linear;
     &-opened{
       transform: translateY(0);
     }
@@ -252,7 +252,6 @@
     margin-top: 85px;
     border-top: 1px solid #D9D9D9;
     transform: translateY(-200%);
-    transition: all .2s linear;
     &-opened{
       transform: translateY(0);
     }
@@ -481,6 +480,68 @@
   }
   .swiper-container{
     overflow: hidden;
+  }
+
+  .details{
+    &__img-part{
+      width: 100%;
+    }
+    &__text-part{
+      width: 100%;
+    }
+    &__img-link{
+      display: none;
+    }
+    &__img-link-main{
+      display: block;
+      width: 100%;
+    }
+    &__img-main{
+      max-width: 100%;
+    }
+    &__menu-wrapper{
+      overflow-x: auto;
+    }
+    &__menu{
+      min-width: 500px;
+      gap: 20px;
+      justify-content: space-between;
+    }
+    &__tub-configuration{
+      flex-wrap: wrap;
+      width: 100%;
+      gap: 30px;
+    }
+  }
+  .configuration-card{
+    &__wrapper{
+      max-width: 100%;
+    }
+  }
+  .similar-projects{
+    &__wrapper{
+      padding: 0 10px;
+    }
+    &__list{
+      flex-wrap: wrap;
+      gap: 40px;
+    }
+    &__item{
+      width: 100%;
+    }
+  }
+  .similar-project{
+    &__wrapper{
+      max-width: 100%;
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .details{
+    &__price{
+      max-width: 100%;
+    }
   }
 }
 

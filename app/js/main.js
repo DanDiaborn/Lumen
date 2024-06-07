@@ -1,4 +1,7 @@
 window.onload = () => {
+
+  //SWIPER
+
   document.querySelectorAll('.slider-section').forEach(container => {
     const currentSlideNum = container.querySelector('.slider-section__current-slide-num');
     const totalSlideNum = container.querySelector('.slider-section__total-slide-num');
@@ -14,6 +17,7 @@ window.onload = () => {
       },
       on: {
         slideChange: function () {
+          updateTabs();
           currentSlideNum.innerHTML = this.realIndex + 1;
         },
       },
@@ -23,13 +27,52 @@ window.onload = () => {
 
     buttonPrev.onclick = () => {
       swiper.slideTo(swiper.realIndex - 1);
-    }
+    };
 
     buttonNext.onclick = () => {
       swiper.slideTo(swiper.realIndex + 1);
-    }
+    };
+
+    // TABS
+
+    const updateTabs = () => {
+      let currentSlide = swiper.activeIndex;
+      let elementsInCurrentSlide = swiper.slides[currentSlide];
+      let tubMenuItems = elementsInCurrentSlide.querySelectorAll('.details__menu-item');
+      let tubsBody = elementsInCurrentSlide.querySelectorAll('.details__tub');
+
+      tubMenuItems.forEach((el, key) => {
+        el.onclick = () => {
+          tubMenuItems.forEach((item, index) => {
+            if (key === index) {
+              item.classList.add('details__menu-item-active');
+              tubsBody[index].classList.remove('details__hide');
+            } else {
+              item.classList.remove('details__menu-item-active');
+              tubsBody[index].classList.add('details__hide');
+            }
+          });
+        };
+      });
+    };
+    updateTabs();
+
+    // SCROLL
+
+    swiper.slides.forEach(slide => {
+      var scrollableElements = slide.querySelectorAll('.details__menu-wrapper');
+      scrollableElements.forEach(function (element) {
+        element.addEventListener('touchmove', function (event) {
+          event.stopPropagation();
+        });
+      });
+    });
+
   });
 
+
+
+  //ADAPTIVE MENU
 
   const burgerButton = document.querySelector('.header-mobile__menu-button ');
 
@@ -38,6 +81,8 @@ window.onload = () => {
     document.querySelector('.header-mobile__menu-button').classList.toggle('header-mobile__menu-button-opened');
     document.querySelector('.header').classList.toggle('header-opened');
   }
+
+  //DROPDAWNS
 
   const location = document.querySelector('.header__location-current');
 

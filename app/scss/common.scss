@@ -4,6 +4,12 @@
 box-sizing: border-box;
 }
 
+* {
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  -webkit-tap-highlight-color: transparent; /* Для старых версий WebKit */
+  outline: none; /* Убираем обводку */
+}
+
 a{
   text-decoration: none;
   color: inherit;
@@ -19,7 +25,6 @@ body{
   max-width: 1200px;
   margin: 0 auto;
 }
-
 
 .brown-button{
   background-color: #bea887;
@@ -116,4 +121,413 @@ body{
 
 .hide{
   display: none;
+}
+
+
+.header-mobile{
+  display: none;
+}
+
+.header{
+  position: absolute;
+  top: 0;
+  z-index: 10;
+  width: 100%;
+  &__wrapper{
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__location{
+    position: relative;
+  }
+  &__location-current{
+    position: relative;
+    padding-left: 20px;  
+    cursor: pointer;
+    &:before{
+      content: "";
+      position: absolute;
+      left: 0; 
+      top: 50%;
+      transform: translateY(-50%);
+      height: 16px;
+      width: 12px;
+      background-image: url('../images/location.svg');
+      background-size: cover;
+    }
+  }
+  &__location-list{
+    bottom: -75px;
+    width: 178px;
+    padding: 10px;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    border: 1px solid transparent; /* Transparent border to make the gradient visible */
+    border-image-source: linear-gradient(263.85deg, #B8A17F 0%, #D1BD9F 103.41%);
+    border-image-slice: 1; /* Ensure the gradient covers the entire border */
+  }
+  &__location-hide{
+    display: none;
+  }
+  &__location-item{
+    cursor: pointer;
+  }
+  &__menu{
+    display: flex;
+    gap: 20px;
+  }
+  &__menu-link{
+    position: relative;
+  }
+  &__submenu{
+    bottom: -150px;
+    width: 178px;
+    padding: 10px;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    border: 1px solid transparent; /* Transparent border to make the gradient visible */
+    border-image-source: linear-gradient(263.85deg, #B8A17F 0%, #D1BD9F 103.41%);
+    border-image-slice: 1; /* Ensure the gradient covers the entire border */
+  }
+  &__submenu-hide{
+    display: none;
+  }
+  &__menu-item-parent{
+    padding-right: 20px;
+    position: relative;
+    cursor: pointer;
+    &:before{
+      content: "";
+      position: absolute;
+      right: 0; 
+      top: 50%;
+      transform: translateY(-50%);
+      height: 6px;
+      width: 13px;
+      background-image: url('../images/corner.svg');
+      background-size: cover;
+    } 
+  }
+  &__contacts{
+    position: relative;
+  }
+  &__contacts-mobile{
+    display: none;
+  }
+  &__contacts-links{
+    display: flex;
+    gap: 7px;
+    align-items: center;
+  }
+  &__request-call-mobile{
+    display: none;
+  }
+  &__request-call{
+    position: absolute;
+    top: calc(100% + 10px);
+    right: 0;
+  }
+  &__mobile{
+    display: none;
+  }
+}
+
+.slider-section{
+  &__wrapper{
+    overflow: hidden;
+  }
+  &__header{
+    margin-bottom: 60px;
+    display: flex;
+    justify-content: space-between;
+  }
+  &__pagination{
+    display: flex;
+    gap: 30px;
+  }
+  &__pagination-numbers{
+    color: #2E2E2E;
+    display: flex;
+    width: 30px;
+    justify-content: space-between;
+    position: relative;
+  }
+  &__current-slide-num{
+    font-size: 22px;
+    align-self: flex-start;
+  }
+  &__total-slide-num{
+    font-size: 16px;
+    align-self: flex-start;
+  }
+  &__buttons{
+    display: flex;
+    gap: 10px;
+  }
+  &__title{
+    font-weight: 600;
+    font-size: 26px;
+    color: #0F1B35;
+    text-transform: uppercase;
+  }
+  &__body{
+    display: flex;
+    gap: 60px;
+  }
+  &__img{
+    width: 600px;
+    height: 400px;
+  }
+  &__house-title{
+    font-size: 26px;
+    line-height: 31.2px;
+    margin-bottom: 30px;
+  }
+  &__text{
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+  &__text-top{
+    margin-bottom: 20px;
+  }
+  &__text-bottom{
+    margin-bottom: 40px;
+  }
+  &__text-normal{
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 19.2px;
+  }
+  &__text-bold{
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 21.6px;
+  }
+  &__bread-crumbs{
+    display: flex;
+    margin-bottom: 40px;
+  }
+  &__bread-crumbs-item{
+    color: #949494;
+    &:last-child{
+      color: #000;
+    }
+  }
+}
+
+.swiper-slide{
+  padding-left: 1px;
+}
+
+.slider-section-reflected{
+  .slider-section__body{
+    justify-content: space-between;
+    & > img{
+      order: 2;
+    }
+    & > div{
+      order: 1;
+    }
+  }
+}
+
+.tour{
+  &__wrapper{
+    background: linear-gradient(263.85deg, #B8A17F 0%, #D1BD9F 103.41%);
+    padding: 80px;
+    display: flex;
+  }
+  &__text-part{
+    width: 50%;
+    padding-right: 70px;
+  }
+  &__form-part{
+    width: 50%;
+  }
+  &__title{
+    font-weight: 600;
+    font-size: 26px;
+    line-height: 31.2px;
+    color: #fff;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+  }
+  &__subtitle{
+    color: #fff;
+    font-size: 26px;
+    line-height: 31.2px;
+  }
+  &__form{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+  &__input-wrapper{
+    max-width: 340px;
+    position: relative;
+    &:before{
+      position: absolute;
+      content: "";
+      width: 100%;
+      height: 1px;
+      background-color: #fff;
+      bottom: -10px;
+      left: 0;
+    }
+  }
+  &__name,
+  &__phone{
+    width: 100%;
+    border: none;
+    background-color: transparent;
+    outline: none;
+    color: #fff;
+    font-size: 14px;
+    padding: 0 5px;
+    &::placeholder{
+      color: #fff;
+      font-size: 14px;
+      opacity: .7;
+    }
+  }
+  &__checkbox{
+    display: none;
+  }
+  &__checkbox-label{
+    display: inline-block;
+    padding: 10px 0 10px 35px;
+    font-size: 14px;
+    color: #fff;
+    cursor: pointer;
+    line-height: 17.07px;
+    position: relative;
+  }
+  &__checkbox + &__checkbox-label:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: calc(50% + 1px);
+    transform: translateY(-50%);
+    width: 17px;
+    height: 17px;
+    background: url('../images/white-checkbox-unactive.svg') no-repeat center center;
+    background-size: contain;
+  }
+  &__checkbox:checked + &__checkbox-label:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 26px;
+    height: 20px;
+    background: url('../images/white-checkbox.svg') no-repeat center center;
+    background-size: contain;
+  }
+}
+
+.footer{
+  background-color: #f4f8fc;
+  &__wrapper{
+    color: #2E2E2E;
+    padding-top: 120px;
+  }
+  &__title{
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 26px;
+  }
+  &__lists{
+    margin-top: 60px;
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 80px;
+    position: relative;
+    &:before{
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 1px;
+      left: 0;
+      bottom: 0;
+      background-color: #D9D9D9;
+    }
+  }
+  &__items{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  &__item{
+    max-width: 268px;
+    line-height: 17px;
+  }
+  &__text{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    & > :first-child{
+      font-size: 16px;
+    }
+  }
+  &__text-main{
+    line-height: 19.2px;
+  }
+  &__links{
+    margin-top: 50px;
+    display: flex;
+    gap: 20px;
+  }
+  &__link{
+    text-decoration: underline;
+  }
+  &__subfooter{
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-between;
+    font-size: 10px;
+  }
+  &__subfooter-item-underline{
+    text-decoration: underline;
+  }
+  &__subfooter-item{
+    display: flex;
+    gap: 7px;
+    align-items: center;
+  }
+  &__studio-logo{
+    width: 80px;
+    height: 16px;
+  }
+  &__links-mobile{
+    display: none;
+  }
+}
+.main{
+  &__banner{
+    padding-bottom: 120px;
+  }
+  &__download-catalog{
+    padding: 120px 0;
+  }
+  &__mortgage{
+    padding: 120px 0;
+    background-color: #f4f8fc;
+  }
+  &__tour{
+    padding: 120px 0;
+  }
+  &__slider-section{
+    padding: 120px 0;
+  }
+  &__slider-section-reflected{
+    background-color: #f4f8fc;
+  }
 }
