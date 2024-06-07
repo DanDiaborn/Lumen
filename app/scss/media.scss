@@ -359,6 +359,9 @@
   }
 
   .slider-section{
+    &__bread-crumbs{
+      display: none;
+    }
     &__wrapper{
       padding: 0 10px;
     }
