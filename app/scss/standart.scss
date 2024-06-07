@@ -1,0 +1,122 @@
+
+.main{
+  &__banner-standart{
+    padding: 120px 0;
+  }
+  &__catalog{
+    padding: 120px 0;
+    background-color: #f4f8fc;
+  }
+}
+
+.banner-standart{
+  &__wrapper{
+    padding: 0 10px;
+  }
+  &__title{
+    font-size: 46px;
+    font-weight: 500;
+    line-height: 55.2px;
+    letter-spacing: -0.02em;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+  }
+  &__subtitle{
+    font-size: 26px;
+    font-weight: 500;
+    line-height: 31.2px;
+    margin-bottom: 60px;
+  }
+  &__img{
+    max-width: 100%;
+  }
+  &__list{
+    margin-top: 35px;
+    display: flex;
+    gap: 30px 85px;
+    flex-wrap: wrap;
+  }
+  &__item{
+    max-width: 40%;
+  }
+  &__item-title{
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 19.2px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+  &__item-text{
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 19.2px;
+  }
+}
+
+.catalog{
+  &__title{
+    font-size: 26px;
+    font-weight: 600;
+    line-height: 31.2px;
+    text-transform: uppercase;
+    margin-bottom: 60px;
+  }
+  &__filter{
+    display: flex;
+    gap: 20px;
+  }
+  &__filter-value{
+    position: relative;
+    padding-right: 20px;
+    &:after{
+      content: "";
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      height: 6px;
+      width: 13px;
+      background-image: url(../images/corner.svg);
+      background-size: cover;
+    }
+  }
+  &__list{
+    margin-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+  }
+  &__displayed{
+    margin-top: 60px;
+    text-align: center;
+    display: flex;
+    gap: 5px;
+    justify-content: center;
+  }
+  &__displayed-text{
+    text-transform: uppercase;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 19.2px;
+  } 
+  &__pagination-numbers{
+    color: #2E2E2E;
+    display: flex;
+    width: 45px;
+    justify-content: space-between;
+    position: relative;
+  }
+  &__current-slide-num{
+    font-size: 22px;
+    align-self: flex-start;
+  }
+  &__total-slide-num{
+    font-size: 16px;
+    align-self: flex-start;
+  }
+  &__button{
+    margin: 0 auto;
+    margin-top: 40px;
+  }
+}

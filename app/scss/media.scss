@@ -42,6 +42,13 @@
       }
     }
   }
+
+  .catalog{
+    &__wrapper{
+      padding: 0 10px;
+    }
+  }
+
   .download-catalog{
     &__wrapper{
       margin: 0 10px;
@@ -118,7 +125,7 @@
     margin-top: 75px;
     border-top: 1px solid #D9D9D9;
     transform: translateX(200%);
-    transition: all .5s linear;
+    transition: all .4s linear;
     &-opened{
       transform: translateX(0);
     }
@@ -187,18 +194,14 @@
     }
     &__wrapper{
       padding: 0 10px;
-      flex-wrap: wrap;
     }
     &__list{
       gap: 10px;
     }
     &__text-part{
-      width: 100%;
+      width: calc(50% - 30px);
       padding: 0;
       margin-bottom: 30px;
-    }
-    &__img{
-      width: 100%;
     }
   }
 }
@@ -244,12 +247,6 @@
   
   .header{
     margin-top: 85px;
-    border-top: 1px solid #D9D9D9;
-    transform: translateX(200%);
-    transition: all .5s linear;
-    &-opened{
-      transform: translateX(0);
-    }
     &__wrapper{
       margin: 0;
       flex-wrap: wrap;
@@ -311,6 +308,18 @@
     }
   }
 
+  .mortgage{
+    &__wrapper{
+      flex-wrap: wrap;
+    }
+    &__img-part{
+      width: 100%;
+    }
+    &__text-part{
+      width: 100%;
+    }
+  }
+
   .banner{
     &__wrapper{
       padding: 0 10px;
@@ -358,10 +367,11 @@
     }
   }
 
+  .bread-crumbs{
+    display: none;
+  }
+
   .slider-section{
-    &__bread-crumbs{
-      display: none;
-    }
     &__wrapper{
       padding: 0 10px;
     }
@@ -540,6 +550,11 @@
   }
   .similar-project{
     &__wrapper{
+      max-width: 100%;
+    }
+  }
+  .banner-standart{
+    &__item{
       max-width: 100%;
     }
   }
