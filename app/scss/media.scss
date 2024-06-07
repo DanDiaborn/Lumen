@@ -520,6 +520,11 @@
     &__wrapper{
       max-width: 100%;
     }
+    &__button{  
+      width: calc(100% - 20px);
+      margin-left: 10px;
+      margin-right: 10px;
+    }
   }
   .similar-projects{
     &__wrapper{
