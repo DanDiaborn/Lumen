@@ -5,6 +5,8 @@
   "license": "MIT",
   "dependencies": {
     "gulp-clean": "^0.4.0",
+    "jquery": "^3.7.1",
+    "lightbox2": "^2.11.4",
     "normalize.css": "^8.0.1",
     "reset-css": "^5.0.2",
     "swiper": "^11.1.4"

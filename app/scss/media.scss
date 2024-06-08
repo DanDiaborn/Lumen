@@ -131,10 +131,12 @@
     }
     &__wrapper{
       margin: 0;
-      flex-wrap: wrap;
+      flex-direction: column;
       padding: 0 10px;
+      padding-bottom: 25px;
       align-items: start;
-      justify-content: start;
+      justify-content: flex-start;
+      height: calc(100% - 85px);
     }
     &__logo{
       display: none;
@@ -144,12 +146,13 @@
       margin-top: 30px;
       order: 1;
       flex-direction: column;
+      flex-grow: 1;
     }
     &__contacts{
       display: none;
     }
     &__contacts-mobile{
-      margin-top: 40px;
+      display: block;
       width: 100%;
       order: 2;
     }
@@ -161,6 +164,23 @@
       width: 100%;
       order: 3;
       margin-top: 10px;
+    }
+    &__location-current{
+      text-decoration: underline;
+      padding-left: 25px;
+      &:before{
+        width: 18px;
+        height: 22px;
+      }
+    }
+    &__location-list{
+      width: 300px;
+      gap: 15px;
+      top: calc(100% + 15px);
+    }
+    &__submenu{
+      width: 300px;
+      left: 149px;
     }
     &__request-call{
       display: none;
@@ -209,6 +229,9 @@
       padding: 0 10px;
     }
   }
+  .select-city{
+    margin: 0 10px;
+  }
 }
 
 
@@ -254,8 +277,6 @@
     margin-top: 85px;
     &__wrapper{
       margin: 0;
-      flex-wrap: wrap;
-      padding: 0 10px;
       align-items: start;
       justify-content: start;
     }
@@ -272,7 +293,7 @@
       display: none;
     }
     &__contacts-mobile{
-      margin-top: 40px;
+      display: block;
       width: 100%;
       order: 2;
     }
@@ -462,9 +483,6 @@
       padding-top: 20px;
       flex-wrap: wrap;
     }
-    &__subfooter-item-developers{
-      display: none;
-    }
     &__links-mobile{
       display: block;
     }
@@ -585,6 +603,18 @@
       line-height: 24px;
     }
   }
+  .select-city{
+    &__list{
+      gap: 20px;
+    }
+  }
+  .popup{
+    &__title{
+      font-size: 19px;
+      font-weight: 600;
+      line-height: 26px;
+    }
+  }
 }
 
 @media (max-width: 500px) {
@@ -598,5 +628,16 @@
 @media (max-width: 375px) {
   .black-button{
     max-width: 100%;
+  }
+  .header{
+    &__submenu{
+      width: calc(100vw - 20px);
+      left: calc(50vw - 10px);
+    }
+    &__location-list{
+      width: 100%;
+      gap: 15px;
+      top: calc(100% + 15px);
+    }
   }
 }

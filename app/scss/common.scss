@@ -141,6 +141,7 @@ body{
   }
   &__location{
     position: relative;
+    margin-right: 100px;
   }
   &__location-current{
     position: relative;
@@ -159,7 +160,7 @@ body{
     }
   }
   &__location-list{
-    bottom: -75px;
+    top: calc(100% + 20px);
     width: 178px;
     padding: 10px;
     position: absolute;
@@ -169,6 +170,7 @@ body{
     border: 1px solid transparent; /* Transparent border to make the gradient visible */
     border-image-source: linear-gradient(263.85deg, #B8A17F 0%, #D1BD9F 103.41%);
     border-image-slice: 1; /* Ensure the gradient covers the entire border */
+    background-color: #fff;
   }
   &__location-hide{
     display: none;
@@ -182,9 +184,12 @@ body{
   }
   &__menu-link{
     position: relative;
+    display: inline-block;
   }
   &__submenu{
-    bottom: -150px;
+    top: calc(100% + 20px);
+    left: 50%;
+    transform: translateX(-50%);
     width: 178px;
     padding: 10px;
     position: absolute;
@@ -194,11 +199,19 @@ body{
     border: 1px solid transparent; /* Transparent border to make the gradient visible */
     border-image-source: linear-gradient(263.85deg, #B8A17F 0%, #D1BD9F 103.41%);
     border-image-slice: 1; /* Ensure the gradient covers the entire border */
+    background-color: #fff;
+    z-index: 10;
   }
   &__submenu-hide{
     display: none;
   }
+  &__submenu-link{
+    width: 100%;
+    height: 100%;
+    display: inline-block;
+  }
   &__menu-item-parent{
+    display: inline-block;
     padding-right: 20px;
     position: relative;
     cursor: pointer;
@@ -478,6 +491,50 @@ body{
   &__link{
     text-decoration: underline;
   }
+  &__menu-link{
+    position: relative;
+  }
+  &__submenu{
+    top: 0;
+    right: calc(100% + 10px);
+    width: 178px;
+    padding: 10px;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    border: 1px solid transparent; /* Transparent border to make the gradient visible */
+    border-image-source: linear-gradient(263.85deg, #B8A17F 0%, #D1BD9F 103.41%);
+    border-image-slice: 1; /* Ensure the gradient covers the entire border */
+    background-color: #f4f8fc;
+    z-index: 10;
+  }
+  &__submenu-hide{
+    display: none;
+  }
+  &__submenu-link{
+    width: 100%;
+    height: 100%;
+    display: inline-block;
+  }
+  &__menu-item-parent{
+    display: inline-block;
+    padding-right: 20px;
+    position: relative;
+    cursor: pointer;
+    &:before{
+      content: "";
+      position: absolute;
+      right: 0; 
+      top: 50%;
+      transform: translateY(-50%);
+      height: 6px;
+      width: 13px;
+      background-image: url('../images/corner.svg');
+      background-size: cover;
+    } 
+  }
+
   &__subfooter{
     padding: 20px 0;
     display: flex;
@@ -856,5 +913,162 @@ body{
       top: 50%;
       transform: translateY(-50%);
     }
+  }
+}
+
+.select-city{
+  &__logo{
+    margin: 0 auto;
+    margin-top: 30px;
+  }
+  &__wrapper{
+    margin: 0 auto;
+    margin-top: 200px;
+  }
+  &__title{
+    font-size: 26px;
+    font-weight: 600;
+    line-height: 31.2px;
+    text-transform: uppercase;
+  }
+  &__list{
+    margin-top: 40px;
+    padding: 60px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 59px;
+    border: 1px solid transparent; /* Transparent border to make the gradient visible */
+    border-image-source: linear-gradient(263.85deg, #B8A17F 0%, #D1BD9F 103.41%);
+    border-image-slice: 1; /* Ensure the gradient covers the entire border */
+  }
+  &__item{
+    width: 320px;
+    height: 200px;
+    background-color: #FFFDF9;
+    display: flex;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid transparent; /* Transparent border to make the gradient visible */
+    border-image-source: linear-gradient(263.85deg, #B8A17F 0%, #D1BD9F 103.41%);
+    border-image-slice: 1; /* Ensure the gradient covers the entire border */
+  }
+  &__img{
+    width: 100%;
+  }
+  &__name{
+    background-image: linear-gradient(263.85deg, #B8A17F 0%, #D1BD9F 103.41%);
+    -webkit-background-clip: text; /* Для веб-кит браузеров */
+    background-clip: text;
+    color: transparent; /* Делаем цвет текста прозрачным */
+    font-size: 26px;
+    font-weight: 500;
+    line-height: 31.2px;
+  }
+}
+
+.popup{
+  &__wrapper{
+    color: #2E2E2E;
+    max-width: 566px;
+    height: 566px;
+    margin: 0 auto;
+    margin-top: 100px;
+    padding: 9px;
+    padding-top: 78px;
+    border: 1px solid transparent; /* Transparent border to make the gradient visible */
+    border-image-source: linear-gradient(263.85deg, #B8A17F 0%, #D1BD9F 103.41%);
+    border-image-slice: 1; /* Ensure the gradient covers the entire border */
+  }
+  &__title{
+    font-size: 25px;
+    font-weight: 600;
+    line-height: 31.2px;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  &__subtitle{
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 19.2px;
+    text-align: center;
+    display: block;
+    max-width: 258px;
+    margin: 0 auto;
+  }
+  &__form{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin: 0 auto;
+    margin-top: 40px;
+    max-width: 340px;
+  }
+  &__input-wrapper{
+    max-width: 340px;
+    position: relative;
+    &:before{
+      position: absolute;
+      content: "";
+      width: 100%;
+      height: 1px;
+      background-color: #2E2E2E;
+      bottom: -10px;
+      left: 0;
+    }
+  }
+  &__name,
+  &__phone{
+    width: 100%;
+    border: none;
+    background-color: transparent;
+    outline: none;
+    color: #2E2E2E;
+    font-size: 14px;
+    padding: 0 5px;
+    &::placeholder{
+      font-size: 14px;
+      opacity: .7;
+    }
+  }
+  &__checkbox{
+    display: none;
+  }
+  &__checkbox-label{
+    display: inline-block;
+    padding: 10px 0 10px 35px;
+    font-size: 14px;
+    cursor: pointer;
+    line-height: 17.07px;
+    position: relative;
+    opacity: .8;
+  }
+  &__checkbox + &__checkbox-label:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: calc(50% + 1px);
+    transform: translateY(-50%);
+    width: 17px;
+    height: 17px;
+    background: url('../images/checkbox-unactive.svg') no-repeat center center;
+    background-size: contain;
+  }
+  &__checkbox:checked + &__checkbox-label:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 26px;
+    height: 20px;
+    background: url('../images/checkbox.svg') no-repeat center center;
+    background-size: contain;
+  }
+  &__submit{
+    border: none;
+    outline: none;
   }
 }

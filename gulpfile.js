@@ -16,6 +16,8 @@ const watching = () => {
 const scripts = () => {
   return src([
     //path to scripts in node molules.
+    'node_modules/jquery/dist/jquery.min.js',
+    'node_modules/lightbox2/src/js/lightbox.js',
     'app/js/swiper-bundle.js',
     'app/js/main.js'])
     .pipe(concat('main.min.js'))

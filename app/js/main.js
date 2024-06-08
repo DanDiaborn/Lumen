@@ -94,8 +94,31 @@ window.onload = () => {
 
   subMenus.forEach((el, key) => {
     el.onclick = () => {
-      document.querySelectorAll('.header__submenu')[key].classList.toggle('header__submenu-hide');
+      for (let i = 0; i < subMenus.length; i++) {
+        if (i === key) {
+          document.querySelectorAll('.header__submenu')[key].classList.toggle('header__submenu-hide');
+        }
+        else {
+          document.querySelectorAll('.header__submenu')[i].classList.add('header__submenu-hide');
+        }
+      }
     }
   })
+
+  const subMenusFooter = document.querySelectorAll('.footer__menu-item-parent');
+
+  subMenusFooter.forEach((el, key) => {
+    el.onclick = () => {
+      for (let i = 0; i < subMenusFooter.length; i++) {
+        if (i === key) {
+          document.querySelectorAll('.footer__submenu')[key].classList.toggle('footer__submenu-hide');
+        }
+        else {
+          document.querySelectorAll('.footer__submenu')[i].classList.add('footer__submenu-hide');
+        }
+      }
+    }
+  })
+
 
 }
