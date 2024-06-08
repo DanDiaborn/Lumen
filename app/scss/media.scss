@@ -154,8 +154,9 @@
       width: 100%;
       margin-top: 30px;
       order: 1;
-      flex-direction: column;
-      flex-grow: 1;
+      justify-content: space-around;
+      padding-bottom: 30px;
+      border-bottom: 1px solid #D9D9D9;
     }
     &__contacts{
       display: none;
@@ -164,6 +165,7 @@
       display: block;
       width: 100%;
       order: 2;
+      margin-top: 30px;
     }
     &__contacts-img{
       width: 29px;
@@ -172,7 +174,7 @@
     &__location{
       width: 100%;
       order: 3;
-      margin-top: 10px;
+      margin-top: 30px;
     }
     &__location-current{
       text-decoration: underline;
@@ -201,6 +203,7 @@
       margin-top: 30px;
     }
   }
+
   .banner{
     &__img-wrapper{
       &:before{
@@ -282,49 +285,6 @@
     }
   }
   
-  .header{
-    margin-top: 85px;
-    &__wrapper{
-      margin: 0;
-      align-items: start;
-      justify-content: start;
-    }
-    &__logo{
-      display: none;
-    }
-    &__menu{
-      width: 100%;
-      margin-top: 30px;
-      order: 1;
-      flex-direction: column;
-    }
-    &__contacts{
-      display: none;
-    }
-    &__contacts-mobile{
-      display: block;
-      width: 100%;
-      order: 2;
-    }
-    &__contacts-img{
-      width: 29px;
-      height: 29px;
-    }
-    &__location{
-      width: 100%;
-      order: 3;
-    }
-    &__request-call{
-      display: none;
-    }
-    &__request-call-mobile{
-      display: flex;
-      order: 4;
-      position: static; 
-      margin-top: 30px;
-    }
-  }
-
   .main{
     &__banner{
       padding: 60px 0;         
@@ -630,6 +590,52 @@
   .details{
     &__price{
       max-width: 100%;
+    }
+  }
+  .header{
+    margin-top: 85px;
+    &__wrapper{
+      margin: 0;
+      align-items: start;
+      justify-content: start;
+    }
+    &__logo{
+      display: none;
+    }
+    &__menu{
+      width: 100%;
+      margin-top: 30px;
+      order: 1;
+      flex-direction: column;
+      border: none;
+      padding-top: 10px;
+    }
+    &__contacts{
+      display: none;
+    }
+    &__contacts-mobile{
+      display: block;
+      width: 100%;
+      order: 2;
+      margin-top: 10px;
+    }
+    &__contacts-img{
+      width: 29px;
+      height: 29px;
+    }
+    &__location{
+      width: 100%;
+      order: 3;
+      margin-top: 10px;
+    }
+    &__request-call{
+      display: none;
+    }
+    &__request-call-mobile{
+      display: flex;
+      order: 4;
+      position: static; 
+      margin-top: 30px;
     }
   }
 }
