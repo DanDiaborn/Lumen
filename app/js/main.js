@@ -70,8 +70,6 @@ window.onload = () => {
 
   });
 
-
-
   //ADAPTIVE MENU
 
   const burgerButton = document.querySelector('.header-mobile__menu-button ');
@@ -103,18 +101,20 @@ window.onload = () => {
   const subMenusBodies = document.querySelectorAll('.header__submenu');
 
 
-  subMenus.forEach((el, key) => {
-    el.onclick = () => {
-      for (let i = 0; i < subMenus.length; i++) {
-        if (i === key) {
-          subMenusBodies[key].classList.toggle('header__submenu-hide');
-        }
-        else {
-          subMenusBodies[i].classList.add('header__submenu-hide');
+  if (subMenus) {
+    subMenus.forEach((el, key) => {
+      el.onclick = () => {
+        for (let i = 0; i < subMenus.length; i++) {
+          if (i === key) {
+            subMenusBodies[key].classList.toggle('header__submenu-hide');
+          }
+          else {
+            subMenusBodies[i].classList.add('header__submenu-hide');
+          }
         }
       }
-    }
-  })
+    })
+  }
 
   document.addEventListener('click', (event) => {
     for (let i = 0; i < subMenusBodies.length; i++) {
@@ -129,18 +129,20 @@ window.onload = () => {
   const subMenusBodiesFooter = document.querySelectorAll('.footer__submenu');
 
 
-  subMenusFooter.forEach((el, key) => {
-    el.onclick = () => {
-      for (let i = 0; i < subMenusFooter.length; i++) {
-        if (i === key) {
-          subMenusBodiesFooter[key].classList.toggle('footer__submenu-hide');
-        }
-        else {
-          subMenusBodiesFooter[i].classList.add('footer__submenu-hide');
+  if (subMenusFooter) {
+    subMenusFooter.forEach((el, key) => {
+      el.onclick = () => {
+        for (let i = 0; i < subMenusFooter.length; i++) {
+          if (i === key) {
+            subMenusBodiesFooter[key].classList.toggle('footer__submenu-hide');
+          }
+          else {
+            subMenusBodiesFooter[i].classList.add('footer__submenu-hide');
+          }
         }
       }
-    }
-  })
+    })
+  }
 
   document.addEventListener('click', (event) => {
     for (let i = 0; i < subMenusBodiesFooter.length; i++) {
@@ -153,22 +155,26 @@ window.onload = () => {
   //POPUP
   const mortgageButton = document.querySelector('.mortgage__button');
 
-
-  mortgageButton.onclick = () => {
-    document.querySelector('.popup').classList.remove('popup__hide');
-    document.querySelector('body').classList.add('lock');
-    document.querySelector('.popup__bg').classList.remove('popup__hide');
+  if (mortgageButton) {
+    mortgageButton.onclick = () => {
+      document.querySelector('.popup').classList.remove('popup__hide');
+      document.querySelector('body').classList.add('lock');
+      document.querySelector('.popup__bg').classList.remove('popup__hide');
+    }
   }
 
-  document.addEventListener('click', (event) => {
-    if (!document.querySelector('.popup').contains(event.target) &&
-      !mortgageButton.contains(event.target)
-    ) {
-      document.querySelector('.popup').classList.add('popup__hide');
-      document.querySelector('body').classList.remove('lock');
-      document.querySelector('.popup__bg').classList.add('popup__hide');
-    }
-  });
+
+  if (document.querySelector('.popup')) {
+    document.addEventListener('click', (event) => {
+      if (!document.querySelector('.popup').contains(event.target) &&
+        !mortgageButton.contains(event.target)
+      ) {
+        document.querySelector('.popup').classList.add('popup__hide');
+        document.querySelector('body').classList.remove('lock');
+        document.querySelector('.popup__bg').classList.add('popup__hide');
+      }
+    });
+  }
 
 
 }
