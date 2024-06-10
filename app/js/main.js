@@ -90,35 +90,85 @@ window.onload = () => {
     document.querySelector('.header__location-list').classList.toggle('header__location-hide');
   }
 
+  document.addEventListener('click', (event) => {
+    if (!document.querySelector('.header__location-list').contains(event.target) &&
+      !location.contains(event.target)
+    ) {
+      document.querySelector('.header__location-list').classList.add('header__location-hide');
+    }
+  });
+
+
   const subMenus = document.querySelectorAll('.header__menu-item-parent');
+  const subMenusBodies = document.querySelectorAll('.header__submenu');
+
 
   subMenus.forEach((el, key) => {
     el.onclick = () => {
       for (let i = 0; i < subMenus.length; i++) {
         if (i === key) {
-          document.querySelectorAll('.header__submenu')[key].classList.toggle('header__submenu-hide');
+          subMenusBodies[key].classList.toggle('header__submenu-hide');
         }
         else {
-          document.querySelectorAll('.header__submenu')[i].classList.add('header__submenu-hide');
+          subMenusBodies[i].classList.add('header__submenu-hide');
         }
       }
     }
   })
 
+  document.addEventListener('click', (event) => {
+    for (let i = 0; i < subMenusBodies.length; i++) {
+      if (!subMenusBodies[i].contains(event.target) && !subMenus[i].contains(event.target)) {
+        subMenusBodies[i].classList.add('header__submenu-hide');
+      }
+    }
+  });
+
+
   const subMenusFooter = document.querySelectorAll('.footer__menu-item-parent');
+  const subMenusBodiesFooter = document.querySelectorAll('.footer__submenu');
+
 
   subMenusFooter.forEach((el, key) => {
     el.onclick = () => {
       for (let i = 0; i < subMenusFooter.length; i++) {
         if (i === key) {
-          document.querySelectorAll('.footer__submenu')[key].classList.toggle('footer__submenu-hide');
+          subMenusBodiesFooter[key].classList.toggle('footer__submenu-hide');
         }
         else {
-          document.querySelectorAll('.footer__submenu')[i].classList.add('footer__submenu-hide');
+          subMenusBodiesFooter[i].classList.add('footer__submenu-hide');
         }
       }
     }
   })
+
+  document.addEventListener('click', (event) => {
+    for (let i = 0; i < subMenusBodiesFooter.length; i++) {
+      if (!subMenusBodiesFooter[i].contains(event.target) && !subMenusFooter[i].contains(event.target)) {
+        subMenusBodiesFooter[i].classList.add('footer__submenu-hide');
+      }
+    }
+  });
+
+  //POPUP
+  const mortgageButton = document.querySelector('.mortgage__button');
+
+
+  mortgageButton.onclick = () => {
+    document.querySelector('.popup').classList.remove('popup__hide');
+    document.querySelector('body').classList.add('lock');
+    document.querySelector('.popup__bg').classList.remove('popup__hide');
+  }
+
+  document.addEventListener('click', (event) => {
+    if (!document.querySelector('.popup').contains(event.target) &&
+      !mortgageButton.contains(event.target)
+    ) {
+      document.querySelector('.popup').classList.add('popup__hide');
+      document.querySelector('body').classList.remove('lock');
+      document.querySelector('.popup__bg').classList.add('popup__hide');
+    }
+  });
 
 
 }

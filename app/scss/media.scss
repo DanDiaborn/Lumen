@@ -19,10 +19,6 @@
 
 @media (max-width: 1200px) {
   .main{
-    &__slider-section{
-      padding-left: 10px;
-      padding-right: 10px;
-    }
     &__details{
       padding: 0 0 120px 0;
     }
@@ -31,6 +27,11 @@
     }
     &__banner-standart{
       padding: 0 0 120px 0;
+    }
+  }
+  .slider-section{
+    &__wrapper{
+      padding: 0 10px; 
     }
   }
   .footer{
@@ -603,6 +604,7 @@
       display: none;
     }
     &__menu{
+      gap: 30px;
       width: 100%;
       margin-top: 30px;
       order: 1;

@@ -44,7 +44,6 @@ body{
   }
   &:active{
     background: linear-gradient(263.85deg, #A7906D 102.71%, #D1BD9F 103.41%);
- 
   }
 }
 
@@ -58,11 +57,15 @@ body{
   height: 55px;
   border: 1px solid #fff;
   text-transform: uppercase;
-  background-color: transparent;
+  background: transparent;
   color: #fff;
   &:hover{
     color: #C3AD8D;
-    background-color: #fff;
+    background: #fff;
+  }
+  &:active{
+    color: #C3AD8D;
+    background: #f9f9f9;
   }
 }
 
@@ -577,6 +580,12 @@ body{
   &__slider-section-reflected{
     background-color: #f4f8fc;
   }
+  &__popup{
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
 }
 
 .bread-crumbs{
@@ -849,6 +858,9 @@ body{
   &__menu-wrapper{
     margin-bottom: 60px;
   }
+  &__configuration-card{
+    max-width: 380px;
+  }
   &__menu{
     display: flex;
     gap: 60px;
@@ -877,7 +889,9 @@ body{
   }
   &__tub-configuration{
     display: flex;
-    justify-content: space-between;
+    max-width: 100%;
+    flex-wrap: wrap;
+    flex-direction: row;
   }
   &__hide{
     display: none;
@@ -969,14 +983,32 @@ body{
 }
 
 .popup{
+  &__hide{
+    display: none;
+  }
+  &__bg{
+    position: fixed;
+    width: auto;
+    height: auto;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    opacity: .3;
+  }
+  &__bg-body{
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+  }
   &__wrapper{
+    background-color: #fff;
     color: #2E2E2E;
     max-width: 566px;
     height: 566px;
     margin: 0 auto;
-    margin-top: 100px;
+    margin-top: 50px;
     padding: 9px;
-    padding-top: 78px;
     border: 1px solid transparent; /* Transparent border to make the gradient visible */
     border-image-source: linear-gradient(263.85deg, #B8A17F 0%, #D1BD9F 103.41%);
     border-image-slice: 1; /* Ensure the gradient covers the entire border */
