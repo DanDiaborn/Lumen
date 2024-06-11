@@ -81,7 +81,6 @@ window.onload = () => {
   }
 
   //DROPDAWNS
-
   const location = document.querySelector('.header__location-current');
 
   location.onclick = () => {
@@ -167,7 +166,10 @@ window.onload = () => {
   if (document.querySelector('.popup')) {
     document.addEventListener('click', (event) => {
       if (!document.querySelector('.popup').contains(event.target) &&
-        !mortgageButton.contains(event.target)
+        !mortgageButton.contains(event.target) &&
+        !document.querySelector('.popup__checkbox-label').contains(event.target) &&
+        !document.querySelector('.popup__checkbox-wrapper').contains(event.target) &&
+        !document.querySelector('.popup__checkbox').contains(event.target)
       ) {
         document.querySelector('.popup').classList.add('popup__hide');
         document.querySelector('body').classList.remove('lock');
@@ -176,5 +178,12 @@ window.onload = () => {
     });
   }
 
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape') {
+      document.querySelector('.popup').classList.add('popup__hide');
+      document.querySelector('body').classList.remove('lock');
+      document.querySelector('.popup__bg').classList.add('popup__hide');
+    }
+  });
 
 }

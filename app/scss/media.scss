@@ -584,6 +584,9 @@
       font-weight: 600;
       line-height: 26px;
     }
+    &__submit{
+      width: 340px;
+    }
   }
 }
 
@@ -638,6 +641,20 @@
       order: 4;
       position: static; 
       margin-top: 30px;
+    }
+  }
+  .main{
+    &__popup{
+      width: 100%;
+    }
+  }
+  .popup{
+    &__wrapper{
+      padding: 60px 9px;
+    }
+    &__submit{
+      width: 300px;
+      margin: 0 auto;
     }
   }
 }
