@@ -88,11 +88,6 @@
       grid-row: 3 / 4;
     }
   }
-  .mortgage{
-    &__wrapper{
-      padding: 0 10px;
-    }
-  }
   .slider-section{
     &__body{
       gap: 30px;
@@ -220,13 +215,13 @@
     }
   }
   .mortgage{
+    &__text-part{
+      padding: 0 10px;
+    }
     &__title{
       font-size: 24px;
       line-height: 33.6px;
       margin-bottom: 20px;
-    }
-    &__wrapper{
-      padding: 0 10px;
     }
     &__list{
       gap: 10px;
@@ -308,6 +303,9 @@
     &__wrapper{
       flex-wrap: wrap;
       gap: 10px;
+    }
+    &__text-part{
+      padding: 0 10px;
     }
     &__img-part{
       width: 100%;
@@ -595,6 +593,7 @@
   .select-city{
     &__list{
       gap: 20px;
+      padding: 20px;
     }
   }
   .popup{

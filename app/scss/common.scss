@@ -17,6 +17,18 @@ a{
   color: inherit;
 }
 
+select { 
+  /* for Firefox */ 
+  -moz-appearance: none; 
+  /* for Safari, Chrome, Opera */ 
+  -webkit-appearance: none; 
+} 
+
+/* for IE10 */ 
+select::-ms-expand { 
+  display: none; 
+} 
+
 body{
   font-family: 'Montserrat', sans-serif;
   font-weight: 500;
@@ -700,9 +712,12 @@ body{
     display: flex;
     gap: 20px;
   }
-  &__filter-value{
+  &__filter-wrapper{
     position: relative;
-    padding-right: 20px;
+  }
+  &__filter-active{
+    padding-right: 20px;    
+    cursor: pointer;
     &:after{
       content: "";
       position: absolute;
@@ -714,6 +729,28 @@ body{
       background-image: url(../images/corner.svg);
       background-size: cover;
     }
+  }
+  &__filter-list{
+    top: calc(100% + 20px);
+    left: 50%;
+    transform: translateX(-50%);
+    width: 180px;
+    padding: 10px;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    border: 1px solid rgba(0, 0, 0, 0);
+    border-image-source: linear-gradient(263.85deg, #B8A17F 0%, #D1BD9F 103.41%);
+    border-image-slice: 1;
+    background-color: #fff;
+    z-index: 10;
+  }
+  &__filter-value{
+    cursor: pointer;
+  }
+  &__filter-hide{
+    display: none;
   }
   &__list{
     margin-top: 30px;
@@ -771,6 +808,7 @@ body{
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
+    align-content: flex-start;
   }
   &__img-main{
     width: 100%;
@@ -949,6 +987,7 @@ body{
   &__wrapper{
     margin: 0 auto;
     margin-top: 200px;
+    position: relative;
   }
   &__title{
     font-size: 26px;
@@ -978,9 +1017,19 @@ body{
     border: 1px solid transparent; /* Transparent border to make the gradient visible */
     border-image-source: linear-gradient(263.85deg, #B8A17F 0%, #D1BD9F 103.41%);
     border-image-slice: 1; /* Ensure the gradient covers the entire border */
+    position: relative;
   }
   &__img{
+    position: absolute;
     width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: all .3s linear;
+    &:hover{
+      opacity: 1;
+    }
   }
   &__name{
     background-image: linear-gradient(263.85deg, #B8A17F 0%, #D1BD9F 103.41%);
@@ -1149,6 +1198,21 @@ body{
     width: 100%;
     color: $black;
     display: block;
+    position: relative;
+  }
+  &__state{
+    position: absolute;
+    right: 0;
+    top: 30px;
+    height: 40px;
+    width: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $black;
+    color: #fff;
+    font-size: 16px;
+    text-transform: uppercase;
   }
   &__img{
     width: 100%;

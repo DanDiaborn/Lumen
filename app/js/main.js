@@ -154,6 +154,32 @@ window.onload = () => {
     }
   });
 
+  const filterActive = document.querySelector('.catalog__filter-active');
+  const filterValue = document.querySelectorAll('.catalog__filter-value');
+
+  if (filterActive) {
+
+    filterValue.forEach((el, key) => {
+      el.onclick = () => {
+        filterActive.innerHTML = el.innerHTML;
+        document.querySelector('.catalog__filter-list').classList.toggle('catalog__filter-hide');
+      }
+    })
+
+    filterActive.onclick = () => {
+      document.querySelector('.catalog__filter-list').classList.toggle('catalog__filter-hide');
+    }
+
+    document.addEventListener('click', (event) => {
+      if (!document.querySelector('.catalog__filter-list').contains(event.target) &&
+        !filterActive.contains(event.target)
+      ) {
+        document.querySelector('.catalog__filter-list').classList.toggle('catalog__filter-hide');
+      }
+    });
+
+  }
+
   //POPUP
   const mortgageButton = document.querySelector('.mortgage__button');
 
@@ -189,8 +215,6 @@ window.onload = () => {
       document.querySelector('.popup__bg').classList.add('popup__hide');
     }
   }
-
-
 
   document.addEventListener('keydown', (event) => {
     if (event.key === 'Escape') {
