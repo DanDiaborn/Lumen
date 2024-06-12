@@ -169,7 +169,8 @@ window.onload = () => {
         !mortgageButton.contains(event.target) &&
         !document.querySelector('.popup__checkbox-label').contains(event.target) &&
         !document.querySelector('.popup__checkbox-wrapper').contains(event.target) &&
-        !document.querySelector('.popup__checkbox').contains(event.target)
+        !document.querySelector('.popup__checkbox').contains(event.target) &&
+        !burgerButton.contains(event.target)
       ) {
         document.querySelector('.popup').classList.add('popup__hide');
         document.querySelector('body').classList.remove('lock');
@@ -177,6 +178,14 @@ window.onload = () => {
       }
     });
   }
+
+  document.querySelector('.popup__close-btn').onclick = () => {
+    document.querySelector('.popup').classList.add('popup__hide');
+    document.querySelector('body').classList.remove('lock');
+    document.querySelector('.popup__bg').classList.add('popup__hide');
+  }
+
+
 
   document.addEventListener('keydown', (event) => {
     if (event.key === 'Escape') {
