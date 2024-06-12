@@ -1,3 +1,5 @@
+$black: #2E2E2E;
+
 *,
 :before,
 :after{
@@ -73,13 +75,13 @@ body{
   max-width: 300px;
   width: 100%;
   height: 40px;
-  border: 1px solid #2E2E2E;
+  border: 1px solid $black;
   display: flex;
   justify-content: center;
   align-items: center;
   text-transform: uppercase;
   &:hover{
-    background-color: #2E2E2E;
+    background-color: $black;
     color: #fff;
   }
   &:active{
@@ -184,6 +186,8 @@ body{
   &__menu{
     display: flex;
     gap: 20px;
+    font-size: 16px;
+    color: $black;
   }
   &__menu-link{
     position: relative;
@@ -257,6 +261,7 @@ body{
 .slider-section{
   &__wrapper{
     overflow: hidden;
+    color: $black;
   }
   &__header{
     margin-bottom: 60px;
@@ -266,9 +271,10 @@ body{
   &__pagination{
     display: flex;
     gap: 30px;
+    color: $black;
   }
   &__pagination-numbers{
-    color: #2E2E2E;
+    color: $black;
     display: flex;
     width: 30px;
     justify-content: space-between;
@@ -442,13 +448,14 @@ body{
 .footer{
   background-color: #f4f8fc;
   &__wrapper{
-    color: #2E2E2E;
+    color: $black;
     padding-top: 120px;
   }
   &__title{
     font-weight: 600;
     text-transform: uppercase;
     font-size: 26px;
+    color: #0F1B35;
   }
   &__lists{
     margin-top: 60px;
@@ -593,11 +600,12 @@ body{
   &__wrapper{
     display: flex;
     margin-bottom: 40px;
+    font-size: 16px;
   }
   &__item{
     color: #949494;
     &:last-child{
-      color: #000;
+      color: $black;
     }
   }
 }
@@ -640,6 +648,7 @@ body{
   &__wrapper{
     display: flex;
     gap: 30px;
+    color: $black;
   }
   &__text-part{
     width: calc(45% - 15px);
@@ -651,6 +660,7 @@ body{
     text-transform: uppercase;
     font-size: 46px;
     margin-bottom: 30px;
+    color: #0F1B35;
   }
   &__list{
     display: flex;
@@ -726,7 +736,7 @@ body{
     line-height: 19.2px;
   } 
   &__pagination-numbers{
-    color: #2E2E2E;
+    color: $black;
     display: flex;
     width: 45px;
     justify-content: space-between;
@@ -749,7 +759,7 @@ body{
 .details{
   &__wrapper{
     margin-top: 40px;
-    color: #2E2E2E;
+    color: $black;
   }
   &__body{
     display: flex;
@@ -1030,7 +1040,7 @@ body{
   &__wrapper{
     position: relative;
     background-color: #fff;
-    color: #2E2E2E;
+    color: $black;
     max-width: 566px;
     min-width: 300px;
     height: 566px;
@@ -1074,7 +1084,7 @@ body{
       content: "";
       width: 100%;
       height: 1px;
-      background-color: #2E2E2E;
+      background-color: $black;
       bottom: -10px;
       left: 0;
     }
@@ -1085,7 +1095,7 @@ body{
     border: none;
     background-color: transparent;
     outline: none;
-    color: #2E2E2E;
+    color: $black;
     font-size: 14px;
     padding: 0 5px;
     &::placeholder{
@@ -1137,7 +1147,7 @@ body{
   &__wrapper{
     max-width: 380px;
     width: 100%;
-    color: #2E2E2E;
+    color: $black;
     display: block;
   }
   &__img{
@@ -1166,5 +1176,27 @@ body{
   }
   &__credit{
     margin-top: 5px;
+  }
+}
+
+.review{
+  &__wrapper{
+    margin-left: 50%;
+    position: relative;
+  }
+  &__quotes{
+    position: absolute;
+    width: 23px;
+    height: 23px;
+    left: -60px;
+  }
+  &__text{
+    margin-bottom: 20px;
+    font-size: 16px;
+    line-height: 19.2px;
+  }
+  &__author{
+    font-size: 14px;
+    line-height: 17.07px;
   }
 }

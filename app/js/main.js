@@ -10,6 +10,9 @@ window.onload = () => {
     const swiperContainer = container.querySelector('.swiper-container');
 
     const swiper = new Swiper(swiperContainer, {
+      slidesPerView: 'auto',
+      spaceBetween: 30,
+      slidesOffsetAfter: 40,
       navigation: {
         nextEl: buttonNext,
         prevEl: buttonPrev,
@@ -179,10 +182,12 @@ window.onload = () => {
     });
   }
 
-  document.querySelector('.popup__close-btn').onclick = () => {
-    document.querySelector('.popup').classList.add('popup__hide');
-    document.querySelector('body').classList.remove('lock');
-    document.querySelector('.popup__bg').classList.add('popup__hide');
+  if (document.querySelector('.popup__close-btn')) {
+    document.querySelector('.popup__close-btn').onclick = () => {
+      document.querySelector('.popup').classList.add('popup__hide');
+      document.querySelector('body').classList.remove('lock');
+      document.querySelector('.popup__bg').classList.add('popup__hide');
+    }
   }
 
 

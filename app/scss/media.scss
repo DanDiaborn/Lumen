@@ -378,6 +378,9 @@
     &__wrapper{
       padding: 0 10px;
     }
+    &__title{
+      font-size: 20px;
+    }
     &__header{
       flex-direction: column;
       gap: 40px;
@@ -396,19 +399,9 @@
     &__house-title{
       margin-bottom: 20px;
     }
-  }
-
-  .review{
-    &__wrapper{
-      margin: 0;
+    &__img{
       width: 100%;
-    }
-    &__quotes{
-      left: 0;
-      top: 0;
-    }
-    &__text{
-      padding-top: 50px;
+      height: auto;
     }
   }
 
@@ -478,6 +471,10 @@
         order: 2;
       }
     }
+  }
+
+  .swiper-slide {
+    width: calc(100% - 60px)
   }
 
   .brown-button{
@@ -556,6 +553,21 @@
   .banner-standart{
     &__item{
       max-width: 100%;
+    }
+  }
+
+  .review{
+    width: 100%;
+    &__wrapper{
+      margin: 0;
+      width: 100%;
+    }
+    &__quotes{
+      left: 0;
+      top: 0;
+    }
+    &__text{
+      padding-top: 50px;
     }
   }
 
@@ -657,6 +669,41 @@
   .main{
     &__popup{
       width: 100%;
+    }
+  }
+  .slider-section{
+    &__house-title{
+      font-size: 20px;
+    }
+    &__text-normal{
+      font-size: 14px;
+    }
+  }
+  .details{
+    &__body{
+      gap: 30px;
+    }
+    &__text-part{
+      padding: 0;
+    }
+    &__menu{
+      min-width: 450px;
+    }
+    &__house-title{
+      font-size: 20px;
+    }
+    &__text-title{
+      font-size: 14px;
+    }
+  }
+  .banner-standart{
+    &__title{
+      font-size: 24px;
+      line-height: 33.6px;
+    }
+    &__subtitle{
+      font-size: 20px;
+      line-height: 24px;
     }
   }
   .popup{
