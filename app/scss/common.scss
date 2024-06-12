@@ -1264,3 +1264,27 @@ body{
     line-height: 17.07px;
   }
 }
+
+.swiper-slide-active{
+  .details__text-part{
+    display: flex;
+  }
+  .details__info-part{
+    display: flex;
+  }
+  .slider-section__text-wrapper{
+    display: block;
+  }
+}
+
+.swiper-slide-next{
+  .details__text-part{
+    display: none;
+  }
+  .details__info-part{
+    display: none;
+  }
+  .slider-section__text-wrapper{
+    display: none;
+  }
+}
