@@ -414,11 +414,10 @@ body{
     outline: none;
     color: #fff;
     font-size: 14px;
-    padding: 0 5px;
     &::placeholder{
       color: #fff;
       font-size: 14px;
-      opacity: .7;
+      opacity: .5;
     }
   }
   &__checkbox{
@@ -432,15 +431,16 @@ body{
     cursor: pointer;
     line-height: 17.07px;
     position: relative;
+    opacity: .8;
   }
   &__checkbox + &__checkbox-label:before {
     content: "";
     position: absolute;
     left: 0;
-    top: calc(50% + 1px);
+    top: 50%;
     transform: translateY(-50%);
-    width: 17px;
-    height: 17px;
+    width: 26px;
+    height: 20px;
     background: url('../images/white-checkbox-unactive.svg') no-repeat center center;
     background-size: contain;
   }
@@ -1070,22 +1070,7 @@ body{
     height: 20px;
     background-image: url('../images/burger-close.svg');
     background-repeat: no-repeat;
-
   }
-  // &__close-button{
-  //   width: 30px;
-  //   height: 17px;
-  //   cursor: pointer;
-  //   background-image: url('../images/burger-close.svg');
-  // }
-  // &__menu-button-opened{
-  //   width: 20px;
-  //   height: 20px;
-  //   cursor: pointer;
-  //   object-fit: contain;
-  //   background-repeat: no-repeat;
-  //   background-image: url('../images/burger-close.svg');
-  // }
   &__wrapper{
     position: relative;
     background-color: #fff;
@@ -1146,7 +1131,6 @@ body{
     outline: none;
     color: $black;
     font-size: 14px;
-    padding: 0 5px;
     &::placeholder{
       font-size: 14px;
       opacity: .7;
@@ -1163,15 +1147,15 @@ body{
     line-height: 17.07px;
     position: relative;
     opacity: .8;
+    color: #949494;
   }
   &__checkbox + &__checkbox-label:before {
     content: "";
     position: absolute;
     left: 0;
-    top: calc(50% + 1px);
-    transform: translateY(-50%);
-    width: 17px;
-    height: 17px;
+    top: 10px;
+    width: 26px;
+    height: 20px;
     background: url('../images/checkbox-unactive.svg') no-repeat center center;
     background-size: contain;
   }
@@ -1179,8 +1163,7 @@ body{
     content: "";
     position: absolute;
     left: 0;
-    top: 50%;
-    transform: translateY(-50%);
+    top: 10px;
     width: 26px;
     height: 20px;
     background: url('../images/checkbox.svg') no-repeat center center;
@@ -1265,18 +1248,6 @@ body{
   }
 }
 
-.swiper-slide-active{
-  .details__text-part{
-    display: flex;
-  }
-  .details__info-part{
-    display: flex;
-  }
-  .slider-section__text-wrapper{
-    display: block;
-  }
-}
-
 .swiper-slide-next{
   .details__text-part{
     display: none;
@@ -1286,5 +1257,17 @@ body{
   }
   .slider-section__text-wrapper{
     display: none;
+  }
+}
+
+.swiper-slide-active{
+  .details__text-part{
+    display: flex;
+  }
+  .details__info-part{
+    display: block;
+  }
+  .slider-section__text-wrapper{
+    display: block;
   }
 }
