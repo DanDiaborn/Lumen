@@ -110,6 +110,8 @@
       height: 22px;
       cursor: pointer;
       background-image: url('../images/burger-open.svg'); 
+      background-repeat: no-repeat;
+      background-size: cover;
     }
     &__menu-button-opened{
       width: 22px;
