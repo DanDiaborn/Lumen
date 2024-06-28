@@ -228,4 +228,29 @@ window.onload = () => {
     }
   });
 
+  //SLIDER HEIGHT
+
+  const sliderSections = document.querySelectorAll('.slider-section-index');
+  const sliderSectionsImg = document.querySelectorAll('.slider-section__img');
+  const sliderSectionsBody = document.querySelectorAll('.slider-section__body');
+
+
+  const setSlidersHeight = () => {
+    if (sliderSections.length > 0) {
+      let ImgHeights = [];
+      for (let i = 0; i < sliderSectionsImg.length; i++) {
+        ImgHeights.push(sliderSectionsImg[i].offsetHeight);
+      }
+      const maxImgHeight = Math.max.apply(null, ImgHeights);
+      sliderSectionsBody.forEach((el, key) => {
+        el.style.height = maxImgHeight + 350 + "px";
+      })
+    }
+  }
+  setSlidersHeight();
+
+  window.addEventListener('resize', (e) => {
+    setSlidersHeight();
+  });
+
 }

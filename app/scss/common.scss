@@ -757,7 +757,6 @@ body{
     display: flex;
     flex-wrap: wrap;
     gap: 30px;
-    justify-content: center;
   }
   &__displayed{
     margin-top: 60px;
@@ -1182,6 +1181,10 @@ body{
     color: $black;
     display: block;
     position: relative;
+    height: 395px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
   }
   &__state{
     position: absolute;
