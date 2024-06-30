@@ -13,9 +13,6 @@ window.onload = () => {
       slidesPerView: 'auto',
       spaceBetween: 30,
       slidesOffsetAfter: 55,
-      lazy: {
-        loadPrevNext: true, // Load images for the next and previous slides
-      },
       navigation: {
         nextEl: buttonNext,
         prevEl: buttonPrev,
