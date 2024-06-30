@@ -10,6 +10,7 @@ window.onload = () => {
     const swiperContainer = container.querySelector('.swiper-container');
 
     const swiper = new Swiper(swiperContainer, {
+      lazy: true,
       slidesPerView: 'auto',
       spaceBetween: 30,
       slidesOffsetAfter: 55,
