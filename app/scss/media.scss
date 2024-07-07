@@ -513,11 +513,12 @@
       }
     }
     &__img-link{
-      display: none;
+      max-width: 115px;
     }
     &__img-link-main{
       display: block;
       width: 100%;
+      max-width: 100%;
     }
     &__img-main{
       max-width: 100%;
@@ -726,6 +727,12 @@
     &__text-part{
       padding: 0;
     }
+    &__img-link{
+      max-width: 100px;
+    }
+    &__img-link-main{
+      max-width: 100%;
+    }
     &__menu{
       min-width: 450px;
     }
@@ -770,6 +777,14 @@
       width: 100%;
       gap: 15px;
       top: calc(100% + 15px);
+    }
+  }
+  .details{
+    &__img-link{
+      max-width: 80px;
+    }
+    &__img-link-main{
+      max-width: 100%;
     }
   }
 }
