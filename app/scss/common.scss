@@ -811,7 +811,7 @@ body{
   }
   &__img-link{
     width: 100%;
-    max-width: 134px;
+    max-width: 180px;
   }
   &__img-link-main{
     width: 100%;
@@ -820,6 +820,9 @@ body{
   &__img{
     width: 100%;
     height: 100%;
+    object-fit: contain;
+    object-position: center;
+    max-height: 100px;
   }
   &__img-main{
     width: 100%;

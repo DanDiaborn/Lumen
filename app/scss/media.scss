@@ -609,6 +609,9 @@
     }
   }
   .select-city{
+    &__wrapper{
+      margin-top: 50px;
+    }
     &__list{
       gap: 20px;
       padding: 20px;
